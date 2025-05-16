@@ -5,6 +5,13 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Specific background for products and product-details pages */
+body[data-page="products"],
+body[data-page="product-details"] {
+    background-color: #fff3b0;
+    /* More vibrant pastel yellow */
+}
+
 header {
     background-color: #333;
     color: white;
@@ -31,16 +38,19 @@ main {
     padding: 20px;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: #333;
 }
 
-.menu, .product-list {
+.menu,
+.product-list {
     list-style: none;
     padding: 0;
 }
 
-.menu li, .product-list li {
+.menu li,
+.product-list li {
     margin-bottom: 10px;
 }
 
@@ -49,7 +59,8 @@ h1, h2 {
     border-collapse: collapse;
 }
 
-.product-table th, .product-table td {
+.product-table th,
+.product-table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -65,4 +76,19 @@ footer {
     width: 100%;
 }
 
+/* Style for the back button */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
 
+.back-button:hover {
+    background-color: #555;
+}
