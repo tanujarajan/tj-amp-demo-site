@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Website</title>
+    <!-- Amplitude Tracking Code -->
+    <script src="config.js"></script> 
+    <script>
+        // Dynamically load the Amplitude SDK using the API key
+        const amplitudeScript = document.createElement("script");
+        amplitudeScript.src = `https://cdn.amplitude.com/script/${AMPLITUDE_API_KEY}.js`;
+        document.head.appendChild(amplitudeScript);
+    
+        // Initialize Amplitude after the script loads
+        amplitudeScript.onload = function() {
+            window.amplitude.init(AMPLITUDE_API_KEY, {
+                fetchRemoteConfig: true,
+                autocapture: false
+            });
+        };
+    </script>
+    
+    <!-- <script src="https://cdn.amplitude.com/script/20c2a0fc1623d7a7136c5373b6587777.js"></script>
+    <script>
+      window.amplitude.init('20c2a0fc1623d7a7136c5373b6587777', {
+        fetchRemoteConfig: true,
+        autocapture: false
+      });
+    </script> -->
+    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.13.5-min.js.gz"></script>
+    <script>
+    const sessionReplayTracking = window.sessionReplay.plugin({sampleRate: 1});
+    window.amplitude.add(sessionReplayTracking);
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Menu</h2>
+            <ul class="menu">
+                <li><a href="sign-in.html">Sign In</a></li>
+                <!-- <li><a href="products.html">View Products</a></li> -->
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Product Table</h2>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product 1</td>
+                        <td>$10</td>
+                        <td><a href="product-details.html?id=1">Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>Product 2</td>
+                        <td>$20</td>
+                        <td><a href="product-details.html?id=2">Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>Product 3</td>
+                        <td>$30</td>
+                        <td><a href="product-details.html?id=3">Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Shop Inc.</p>
+    </footer>
+
+    <script src="ori_script.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- <script>
+const sessionReplayTracking = window.sessionReplay.plugin({sampleRate: 1});
+window.amplitude.add(sessionReplayTracking);
+window.amplitude.init('95a77e71434394af6a2c1f4dfd442514')
+</script> -->

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <!-- Amplitude Tracking Code -->
+    <script src="config.js"></script>
+    <script>
+        // Dynamically load the Amplitude SDK using the API key
+        const amplitudeScript = document.createElement("script");
+        amplitudeScript.src = `https://cdn.amplitude.com/script/${AMPLITUDE_API_KEY}.js`;
+        document.head.appendChild(amplitudeScript);
+
+        // Initialize Amplitude after the script loads
+        amplitudeScript.onload = function () {
+            window.amplitude.init(AMPLITUDE_API_KEY, {
+                fetchRemoteConfig: true,
+                autocapture: false
+            });
+        };
+    </script>
+    <!-- <script src="https://cdn.amplitude.com/script/20c2a0fc1623d7a7136c5373b6587777.js"></script>
+    <script>
+      window.amplitude.init('20c2a0fc1623d7a7136c5373b6587777', {
+        fetchRemoteConfig: true,
+        autocapture: false
+      });
+    </script> -->
+    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.13.5-min.js.gz"></script>
+    <script>
+        const sessionReplayTracking = window.sessionReplay.plugin({ sampleRate: 1 });
+        window.amplitude.add(sessionReplayTracking);
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add spacing and vertical alignment for form fields */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: auto;
+            gap: 10px;
+            /* Adds spacing between fields */
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        button {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sign In</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form id="sign-in-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age">
+
+            <label for="favorite-food">Favorite Food:</label>
+            <input type="text" id="favorite-food" name="favorite-food">
+
+            <label for="subscription-tier">Subscription Tier:</label>
+            <select id="subscription-tier" name="subscription-tier">
+                <option value="">Select Tier</option>
+                <option value="free">Free</option>
+                <option value="premium">Premium</option>
+                <option value="vip">VIP</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 Shop Inc.</p>
+    </footer>
+
+    <!-- Include ori_script.js to enable event tracking on this page -->
+    <script src="ori_script.js"></script>
+
+    <!-- 2/28/25 testing version with user properties -->
+    <script>
+        document.getElementById("sign-in-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent page reload
+
+            // ✅ Get user input values
+            let username = document.getElementById("username").value.trim();
+            let age = document.getElementById("age").value.trim();
+            let favoriteFood = document.getElementById("favorite-food").value.trim();
+            let subscriptionTier = document.getElementById("subscription-tier").value;
+
+            // ✅ Ensure username is at least 5 characters (pad with zeros)
+            if (username.length < 5) {
+                username = username.padEnd(5, '0');
+            }
+
+            // ✅ Set User ID
+            amplitude.setUserId(username);
+            // amplitude.setDeviceId("7602bee6-927c-4d07-ad29-386bc08becdc");
+
+            // ✅ Create Identify object for user properties
+            const identify = new amplitude.Identify();
+            if (age) identify.set('age', parseInt(age, 10));
+            if (favoriteFood) identify.set('favorite_food', favoriteFood);
+            if (subscriptionTier) identify.set('subscription_tier', subscriptionTier);
+
+            // ✅ Send user properties
+            amplitude.identify(identify);
+
+            // Track a signInSuccess event with the user properties as event properties
+            amplitude.track("signInSuccess");
+
+            console.log("✅ User Signed In & Properties Set:", {
+                userId: username,
+                age: age,
+                favorite_food: favoriteFood,
+                subscription_tier: subscriptionTier
+            });
+
+            // ✅ Clear form fields after submission
+            document.getElementById("sign-in-form").reset();
+        });
+    </script>
+
+    <!-- Last known working version without user properties -->
+    <!-- <script>
+        document.getElementById("sign-in-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            const username = document.getElementById("username").value;
+            const age = document.getElementById("age").value;
+            const favoriteFood = document.getElementById("favorite-food").value;
+            const subscriptionTier = document.getElementById("subscription-tier").value;
+
+            console.log("User Signed In:", { username, age, favoriteFood, subscriptionTier });
+
+            // alert("Sign In Successful!");
+
+            // Clear form fields after submission
+            document.getElementById("sign-in-form").reset();
+        });
+    </script> -->
+
+
+</body>
+
+</html>

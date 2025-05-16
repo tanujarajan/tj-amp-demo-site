@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <!-- Amplitude Tracking Code -->
+    <script src="config.js"></script> 
+    <script>
+        // Dynamically load the Amplitude SDK using the API key
+        const amplitudeScript = document.createElement("script");
+        amplitudeScript.src = `https://cdn.amplitude.com/script/${AMPLITUDE_API_KEY}.js`;
+        document.head.appendChild(amplitudeScript);
+    
+        // Initialize Amplitude after the script loads
+        amplitudeScript.onload = function() {
+            window.amplitude.init(AMPLITUDE_API_KEY, {
+                fetchRemoteConfig: true,
+                autocapture: false
+            });
+        };
+    </script>
+    <!-- <script src="https://cdn.amplitude.com/script/20c2a0fc1623d7a7136c5373b6587777.js"></script>
+    <script>
+      window.amplitude.init('20c2a0fc1623d7a7136c5373b6587777', {
+        fetchRemoteConfig: true,
+        autocapture: false
+      });
+    </script> -->
+    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.13.5-min.js.gz"></script>
+    <script>
+    const sessionReplayTracking = window.sessionReplay.plugin({sampleRate: 1});
+    window.amplitude.add(sessionReplayTracking);
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Products List</h2>
+            <ul class="product-list">
+                <li><a href="product-details.html?id=1">Product 1 - $10</a></li>
+                <li><a href="product-details.html?id=2">Product 2 - $20</a></li>
+                <li><a href="product-details.html?id=3">Product 3 - $30</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Shop Inc.</p>
+    </footer>
+
+    <script src="ori_script.js"></script>
+</body>
+</html>
