@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
     <!-- Amplitude Tracking Code -->
-    <script src="config.js"></script> 
+    <script src="config.js"></script>
     <script>
         // Dynamically load the Amplitude SDK using the API key
         const amplitudeScript = document.createElement("script");
         amplitudeScript.src = `https://cdn.amplitude.com/script/${AMPLITUDE_API_KEY}.js`;
         document.head.appendChild(amplitudeScript);
-    
+
         // Initialize Amplitude after the script loads
-        amplitudeScript.onload = function() {
+        amplitudeScript.onload = function () {
             window.amplitude.init(AMPLITUDE_API_KEY, {
                 fetchRemoteConfig: true,
                 autocapture: false
             });
         };
+        // Load Amplitude Experiment SDK
+        const experimentScript = document.createElement("script");
+        experimentScript.src = `https://cdn.amplitude.com/script/${AMPLITUDE_API_KEY}.experiment.js`;
+        document.head.appendChild(experimentScript);
     </script>
     <!-- <script src="https://cdn.amplitude.com/script/20c2a0fc1623d7a7136c5373b6587777.js"></script>
     <script>
@@ -29,11 +34,12 @@
     </script> -->
     <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.13.5-min.js.gz"></script>
     <script>
-    const sessionReplayTracking = window.sessionReplay.plugin({sampleRate: 1});
-    window.amplitude.add(sessionReplayTracking);
+        const sessionReplayTracking = window.sessionReplay.plugin({ sampleRate: 1 });
+        window.amplitude.add(sessionReplayTracking);
     </script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Our Products</h1>
@@ -62,4 +68,5 @@
 
     <script src="ori_script.js"></script>
 </body>
+
 </html>
