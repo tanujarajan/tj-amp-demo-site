@@ -1,6 +1,7 @@
 # Vibe Coding - AI Prompt Library
 
 This document contains all the prompts from the Vibe Coding AI Prompt Library. You can copy and paste these directly into your preferred AI assistant.
+Source: https://www.heyandycarroll.com/ai-prompt-library/
 
 ## Quickstart Prompts
 
