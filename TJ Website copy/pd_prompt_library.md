@@ -1,2363 +1,1799 @@
-# AI Prompt Library for Product Development
+# Vibe Coding - AI Prompt Library
 
-This library contains 22 carefully crafted prompts for use with AI-powered assistants like Claude, ChatGPT, and GitHub Copilot. Each prompt is designed to help accelerate specific aspects of product development, from initial validation to growth and iteration.
+This document contains all the prompts from the Vibe Coding AI Prompt Library. You can copy and paste these directly into your preferred AI assistant.
 
-> **How to use this library**: Copy the prompt text and paste it into your AI assistant. Replace any placeholder text (indicated with `[brackets]`) with your specific details.
-
-## Table of Contents
-
-### Quickstart
-- [Quickstart Context Co-Pilot](#quickstart-context-co-pilot)
-- [Build Kick-off Co-Pilot](#build-kick-off-co-pilot)
-- [Start Building Command](#start-building-command)
-
-### Validate
-- [Problem Interview Script](#problem-interview-script)
-- [Jobs To Be Done Framework](#jobs-to-be-done-framework)
-- [Audience & Needs Analysis](#audience--needs-analysis)
-- [Lean Canvas Builder](#lean-canvas-builder)
-
-### Plan
-- [Product Vision & Strategy](#product-vision--strategy)
-- [User Story Map](#user-story-mapping)
-- [PRD Generator](#prd-generator)
-- [MUST-SHOULD-COULD Prioritiser](#must-should-could-prioritiser)
-- [Tech Stack Advisor](#tech-stack-selection)
-- [Roadmap Milestone Planner](#phased-roadmap-development)
-
-### Build
-- [Design System Starter](#design-system-establishment)
-- [Repo & CI/CD Quick-Start](#repo--cicd-quick-start)
-- [Architecture Outline](#architecture-planning)
-- [Feature Implementation Planner](#feature-implementation)
-- [Testing Strategy](#testing-strategy)
-
-### Launch
-- [Landing-Page Copy Crafter](#landing-page-copy-crafter)
-- [Pricing Page Optimiser](#pricing-page-optimiser)
-- [Objection-Handling FAQ Builder](#objection-handling-faq-builder)
-- [Launch Checklist & Roll-back Plan](#launch-checklist--roll-back-plan)
-
-### Grow & Iterate
-- [Growth Experiment Generator](#growth-experiment-generator)
-- [Retrospective Facilitator](#retrospective-facilitator)
-- [KPI Dashboard Prompt](#kpi-dashboard-prompt)
----
-
-## Quickstart
-
-<details>
-<summary><strong>Quickstart Context Co-Pilot</strong></summary>
+## Quickstart Prompts
 
 ### Quickstart Context Co-Pilot
 
-**Name**: Foundational Clarity Generator
+**Purpose:** To have an AI co-pilot guide you in rapidly defining the essential foundational context for your new product idea.
 
-**Purpose**: Rapidly establish foundational context and clarity for your product idea using AI assistance.
+**Goal:** A concise, AI-assisted summary of your core idea, target users, key problems, solution concept, initial tech thoughts, and desired UI style.
 
-**Goal**: Define your product concept, target users, key problems, differentiation, tech stack ideas, and UI style in a concise, structured format.
+**When to Use:** As the very first step with a new idea, to collaboratively build foundational clarity with AI assistance before planning or building.
 
-**Inputs**: Raw idea, assumptions, preferences.
+**Prompt Text:**
 
-**Combine With**: Build Kick-off Co-Pilot → Start Building Command
+```markdown
+## AI Co-Pilot: Define Your Quickstart Context
 
-**When to Use**: At the very beginning of a new idea, before writing specs or building.
+**Instructions for the AI chatbot (e.g., ChatGPT, Claude, Windsurf, Cursor):**
+"You are an expert Product Development Co-Pilot. Your goal is to help me, an aspiring founder, rapidly define the essential foundational context for my new product idea.
 
-**Prompt**:
-```
-You are an expert Product Development Co-Pilot. Your goal is to help me, an aspiring founder, rapidly define the essential foundational context for my new product idea.
-
-Please guide me through the following sections one by one, or in small, logical groups of questions. Wait for my response to each set before moving to the next. My initial thoughts are provided under each section—use these to ask clarifying questions and help me elaborate.
+Please guide me through the following sections **one by one, or in small, logical groups of questions**. Wait for my response to each set of questions before moving to the next. My initial thoughts are provided below each section to give you a starting point – use these to ask clarifying questions and help me elaborate.
 
 After we've gone through all sections, compile a structured summary of the refined context.
 
-Let's begin!
+**Let's begin!**
 
 ---
 
-Section 1: Core Idea & Problem
-Ask me:
-- What’s the main idea or concept for your product? (1–2 sentences)
-- What primary problem does this solve for your audience?
-- What are the 1–2 most critical pain points you aim to address first?
+**Section 1: Core Idea & Problem**
+*Your Task (AI):* Help me explore and clearly articulate:
+    1.  The main idea or concept for my product/service. (Aim for 1-2 sentences)
+    2.  The primary problem my target audience faces that this idea aims to solve. (Aim for 1-2 sentences)
+    3.  The 1-2 most critical pain points related to this problem that I want to address first.
 
-Section 2: Target Audience
-Ask me:
-- Who is your primary target user? (be specific)
-- What key characteristics or needs are relevant?
+*My Initial Thoughts (User to customise):*
+> My idea is about: [e.g., an app for local community skill-sharing]
+> The problem it solves is: [e.g., people have skills but can't easily connect with locals who need them, and vice-versa]
+> Key pain points are: [e.g., difficulty finding trusted local help, underutilised personal skills]
 
-Section 3: Solution & Differentiation
-Ask me:
-- What are the main components of your solution?
-- How is it different from alternatives or uniquely valuable?
+---
 
-Section 4: Initial Tech Stack Considerations
-Ask me:
-- Any platforms or technologies you’re already considering?
-Then suggest:
-- 1–2 lean tech stack options optimized for speed of prototyping, with reasons
+**Section 2: Target Audience**
+*Your Task (AI):* Help me explore and define:
+    1.  My primary target audience segment/niche (be specific, e.g., "retired seniors in urban areas," "freelance graphic designers").
+    2.  Their key characteristics or needs relevant to my idea.
 
-Section 5: Brand/UI Design Style Preferences
-Ask me:
-- Which style best fits your idea?
-    A) Modern & Clean
-    B) Playful & Vibrant
-    C) Elegant & Sophisticated
-    D) Utilitarian & Functional
-- Any specific UI/brand inspirations?
-Then suggest:
-- 2–3 visual keywords to generate mockups
+*My Initial Thoughts (User to customise):*
+> My target audience is: [e.g., residents of my town]
+> Their relevant needs/characteristics are: [e.g., want to learn new things, save money, or connect with community]
 
-Final Task:
-After going through each section, summarize in this format:
-- Product Idea:
-- Core Problem & Pain Points:
-- Target Audience:
-- Proposed Solution & Differentiation:
-- Initial Tech Stack & Recommendations:
-- UI/Brand Style & AI Keyword Suggestions:
+---
+
+**Section 3: Solution & Differentiation**
+*Your Task (AI):* Help me explore and describe:
+    1.  The main components of my proposed solution. (Aim for 1-2 sentences)
+    2.  How my solution is different from existing alternatives, or what unique value it offers (e.g., "simpler," "hyper-local focus," "gamified learning").
+
+*My Initial Thoughts (User to customise):*
+> My solution is: [e.g., a mobile platform where users can list skills they offer or seek]
+> It's different because: [e.g., it focuses only on in-person exchange and includes a reputation system]
+
+---
+
+**Section 4: Initial Tech Stack Considerations**
+*Your Task (AI):* Help me explore and describe:
+    1.  First, ask me about any technologies or platforms I'm leaning towards or would like to consider for a rapid first prototype (e.g., "a simple web page with HTML/CSS/JS," "a mobile app").
+    2.  Then, based on my idea and preferences, suggest 1-2 lean tech stack options suitable for building this rapid first prototype. Focus on tools/frameworks known for quick setup, development, iteration and deployment. Explain your suggestions briefly. 
+
+*My Initial Thoughts (User to customise):*
+> I'm thinking about: [e.g., building a simple responsive website to start. It will need to support some interactivity but doesn't need any heavy JS frameworks like React or Vue.]
+> I'm planning to use Replit/Lovable/V0/Cursor/Windsurf/Bolt.new/Firebase Studio/Trae/Data Button to build this (delete the ones I don't plan to use)
+---
+
+**Section 5: Brand/UI Design Style Preferences**
+*Your Task (AI):*
+    1.  First, present these general style options and ask which best fits my initial vision (or if I have another style in mind):
+        - A) Modern & Clean (minimalist, spacious, professional)
+        - B) Playful & Vibrant (colourful, engaging, friendly)
+        - C) Elegant & Sophisticated (premium feel, refined typography, muted colours)
+        - D) Utilitarian & Functional (focus on clarity and ease of use, less on aesthetics)
+    2.  Based on my choice, suggest 2-3 specific, actionable keywords an AI image generator could use to create a mood board or initial UI mockups (e.g., for "Modern & Clean": "minimalist UI dashboard, teal and grey, sans-serif font").
+
+*My Initial Thoughts (User to customise):*
+> I like the idea and feel of it being [e.g., friendly and approachable, minimal, playful, elegant, utilitarian]
+> I'm inspired by [e.g., the design of a popular app or website]
+> I like [e.g., the use of muted/bold colours, the use of sans-serif font, the use of a dark theme, the use of a light theme]
+
+---
+
+**Final Output (AI to Generate at the End):**
+After guiding me through all sections, please provide a consolidated summary in the following format:
+
+*   **Product Idea:** [Summary]
+*   **Core Problem & Pain Points:** [Summary]
+*   **Target Audience:** [Summary]
+*   **Proposed Solution & Differentiation:** [Summary]
+*   **Initial Tech Stack Considerations & AI Recommendations:** [User's thoughts + AI's suggested options and reasoning]
+*   **Brand/UI Design Style & AI Keyword Suggestions:** [User's preference + AI's suggested keywords]
+
+This summary will serve as the core input for the 'Build Kick-off Plan.'
 ```
 
-**Example Usage**: When you have a spark of a product idea and want to turn it into an actionable, well-structured summary quickly.
+---
 
-**Expected Output**: A clearly defined foundational context summary to guide your MVP and prototyping.
-</details>
-
-<details>
-<summary><strong>Build Kick-off Co-Pilot</strong></summary>
 
 ### Build Kick-off Co-Pilot
 
-**Name**: MVP Planning Assistant
+**Purpose:** To have an AI co-pilot guide you in translating your foundational context into a defined MVP, a rapid prototyping approach, and actionable initial steps.
 
-**Purpose**: Help translate your idea into a defined MVP and rapid prototyping plan.
+**Goal:** An AI-assisted, prioritised MVP feature set, a clear Day 1 prototype target (core user journey), and a list of granular actions to begin building immediately.
 
-**Goal**: Define MVP features, a Day 1 user journey, and granular actions to start building.
+**When to Use:** After using the 'Quickstart Context Co-Pilot,' to collaboratively define your MVP and the immediate plan to build its first iteration with AI assistance.
 
-**Inputs**: Output of Quickstart Context Co-Pilot.
+**Prompt Text:**
 
-**Combine With**: Quickstart Context Co-Pilot → Start Building Command
+```markdown
+## AI Co-Pilot: Plan Your Build Kick-off
 
-**When to Use**: After you’ve defined your product context and want to translate it into an MVP build plan.
+**Instructions for the AI chatbot (e.g., ChatGPT, Claude, Windsurf, Cursor):**
+"You are an expert Product Development Co-Pilot. Your goal is to help me create a 'Build Kick-off Plan' for my product idea. We will use the 'Quickstart Context' (which I will provide) as our foundation.
 
-**Prompt**:
-```
-You are an expert Product Development Co-Pilot. Help me create a 'Build Kick-off Plan' for my product idea. Use the 'Quickstart Context' I provide as our foundation.
+Please guide me through the following sections **one by one, or in small, logical groups of questions**. Wait for my response to each set of questions before moving to the next. My initial thoughts or the output from the previous 'Quickstart Context Co-Pilot' will be provided to give you a starting point.
 
-Guide me through the following sections one by one. Wait for my response before continuing. At the end, generate a Build Kick-off Plan summary.
+After we've gone through all sections, compile a structured 'Build Kick-off Plan'.
 
-Let's begin!
+**Let's begin!**
 
-First, I will provide you the 'Quickstart Context' summary. Reply “Ready” once you’ve processed it.
+**First, I will provide you with the 'Quickstart Context' summary that we previously generated. Reply "Ready" once you've processed the summary.**
+*(User: Paste the summary from 'Quickstart Context Co-Pilot' here)*
 
 ---
 
-Section 1: Decompose Core Solution & Brainstorm Features
-Ask me:
-- What 3–5 product features could bring this solution to life?
-Encourage:
-- Creativity, outside-the-box thinking
+**Section 1: Decompose Core Solution & Brainstorm Delighter Features**
+*Your Task (AI):* Based on my 'Core Solution Idea' from the context provided:
+    1.  Help me brainstorm and list 3-5 potential features or components that would bring it to life. Encourage me to think broadly at first. Prompt me to be creative and think outside the box. These are features that sit outside of core functionality (e.g. registration/login, user profiles, etc.)
 
-Section 2: MVP Feature Set (MoSCoW Prioritization)
-Ask me:
-- What’s the absolute minimum feature set needed to deliver core value?
-- Any Should-Have features to come soon after?
-Then:
-- Summarize Must-Haves and Should-Haves together with common table-stakes MVP items (auth, DB, etc.)
+*My Initial Thoughts (User to customise, or AI to prompt if blank):*
+> Potential features could be: [e.g., skill listing, search for skills, real-time messaging, review/rating system, user profiles, AI-powered skill matching, gamification elements, community features]
 
-Section 3: Define Day 1 User Journey
-Ask me:
-- What is the single, most important journey a user should be able to complete on Day 1?
-Default:
-- A simple front-end-only interactive prototype (mock or no backend)
+---
 
-Section 4: Day 1 Granular Action Plan
-Based on above, generate 3–5 actionable build tasks, such as:
-- Create an index.html page with main layout
-- Add input fields for user skill entry
-- Style using Tailwind (Modern & Clean)
-- Mock backend logic with placeholder data
+**Section 2: Define & Prioritise MVP Feature Set (MoSCoW for Day 1)**
+*Your Task (AI):* From our brainstormed feature list above:
+    1.  Help me identify the **absolute minimum** features needed for a user to experience the core value proposition (the "Must-Haves" for a Day 1 prototype).
+    2.  Help me identify any "Should-Haves" (important, but can come after the initial Must-Haves are working).
+    3.  Remind me that "Could-Haves" and "Won't-Haves (this time)" are deferred to maintain focus for Day 1.
+    4.  Combine the Must-Haves and Should-Haves into a list of features that will be built in the first iteration
+    5.  Provide a full MVP scope, including generic core features that the MVP will require to be viable (table stakes features, like user auth, security, database integration, CMS, etc.)
 
-Final Output Format:
-- Input Quickstart Context:
-- Brainstormed Features:
-- MVP Feature Set (Day 1):
-  - Must-Haves:
-  - Should-Haves:
-- Day 1 Core User Journey:
-- Granular Action Plan:
+*My Initial Thoughts (User to customise, or AI to prompt if blank):*
+> Must-Haves seem to be: [e.g., basic user signup, ability to post one skill, ability to see a list of skills]
+> Should-Haves might be: [e.g., search functionality]
+
+---
+
+**Section 3: High-Level Delivery Approach (Day 1 Goal)**
+*Your Task (AI):* Based on the "Must-Have" MVP features:
+    1.  Help me describe the single, most important **core user journey** for the Day 1 prototype. (e.g., "User lands on a page, inputs X, sees Y result," or "User signs up, creates a basic profile, views a core piece of content.")
+    2.  Confirm that our default target is a **front-end-only interactive prototype** of this core user journey, with backend/database functionality mocked or deferred for now.
+
+*My Initial Thoughts (User to customise, or AI to prompt if blank):*
+> The core journey is: [e.g., User signs up, lists one skill they offer, and sees it appear on a main page]
+
+---
+
+**Section 4: Granular Actions for Getting Started (Day 1)**
+*Your Task (AI):* Based on the MVP features, core user journey, and the 'Chosen Tech Stack' from the 'Quickstart Context':
+    1.  Collaboratively generate a list of 3-5 specific, small, actionable tasks to build the Day 1 prototype.
+    2.  For example, if the tech stack is HTML/CSS/JS, tasks might include: "Create a single `index.html` page for the main interface," "Style the page using basic CSS to reflect the [Brand/UI Style]," "Implement input field(s) for [core user input]," "Add a button to trigger the core action," "Display a mocked-up result/output on the page." Adapt these examples to my specific project.
+
+*My Initial Thoughts (User to customise, or AI to prompt if blank):*
+> We could start with: [e.g., creating the main HTML structure]
+
+---
+
+**Final Output (AI to Generate at the End):**
+After guiding me through all sections, please provide a consolidated 'Build Kick-off Plan' in the following format:
+
+*   **Input Quickstart Context:** (Briefly summarise or reference the provided context)
+*   **Brainstormed Features:** [List]
+*   **MVP Feature Set (Day 1):**
+    *   **Must-Haves:** [List]
+    *   **Should-Haves:** [List]
+*   **Day 1 Prototype - Core User Journey:** [Description]
+*   **Day 1 Prototype - Granular Action Plan:** [Numbered list of 3-5 actions]
+
+This plan will directly feed into the 'Start Building Command' prompt.
 ```
 
-**Example Usage**: After defining a new product’s concept and you’re ready to move into MVP building.
+---
 
-**Expected Output**: A complete MVP build plan and Day 1 feature outline, ready for implementation.
-</details>
-
-<details>
-<summary><strong>Start Building Command</strong></summary>
 
 ### Start Building Command
 
-**Name**: AI Build Command Generator
+**Purpose:** To generate a precise initial command or set of instructions to give to an AI building tool to kickstart the development of your Day 1 prototype.
 
-**Purpose**: Helps you generate the very first build command to give to an AI coding tool.
+**Goal:** A ready-to-use, focused command for an AI development tool, incorporating your context, MVP plan, and guardrails to guide the initial build.
 
-**Goal**: Generate a clear, scoped, and contextualized AI build prompt to start your Day 1 prototype.
+**When to Use:** After creating your 'Build Kick-off Plan,' when you're ready to give the very first instruction to an AI tool to start generating code for your prototype.
 
-**Inputs**: Outputs of Quickstart Context + Build Kick-off Plan
+**Prompt Text:**
 
-**Combine With**: Build Kick-off Co-Pilot
+```markdown
+## Start Building Command
 
-**When to Use**: When you’re ready to paste your first command into ChatGPT, Claude, Cursor, etc. to start generating code.
+You have your "Quickstart Context" and "Build Kick-off Plan." Now, let's craft the initial command to give to your chosen AI building tool (e.g., a Large Language Model like ChatGPT, Claude, Windsurf, Cursor, or a similar code generation assistant).
 
-**Prompt**:
+**Instructions for the AI Building Tool:**
+
+"You are an expert AI developer tasked with building the very first prototype of a new product.
+
+**Project Context (from 'Quickstart Context' Prompt):**
+*   **Problem:** [Insert Problem from Quickstart Context]
+*   **Target Audience:** [Insert Target Audience from Quickstart Context]
+*   **Core Solution Idea:** [Insert Solution Idea from Quickstart Context]
+*   **Key Differentiator:** [Insert Differentiation from Quickstart Context]
+*   **Chosen Tech Stack (or primary components):** [Insert Tech Stack from Quickstart Context, e.g., HTML, CSS, Vanilla JavaScript for a static site; or Next.js with Tailwind CSS]
+*   **Desired UI/Brand Style:** [Insert UI Style from Quickstart Context, e.g., Modern & Clean, with keywords: minimalist UI dashboard, teal and grey, sans-serif font, colourful accents]
+
+**Build Plan (from 'Build Kick-off Plan' Prompt):**
+*   **Day 1 Prototype Goal:** Create a front-end-only interactive prototype of the following core user journey: [Insert Core User Journey from Build Kick-off Plan].
+*   **MVP Must-Have Features for this prototype:**
+    *   [Insert M1 from Build Kick-off Plan]
+    *   [Insert M2 from Build Kick-off Plan]
+    *   (Add other Must-Haves)
+*   **Specific Initial Tasks:**
+    *   [Insert first granular action from Build Kick-off Plan]
+    *   [Insert second granular action from Build Kick-off Plan]
+    *   (Add other granular actions)
+
+**Your Task:**
+Based *only* on the information above, implement **only the very first granular action** from the 'Specific Initial Tasks' list to begin creating the Day 1 prototype. Wait for my confirmation before proceeding to any subsequent tasks.
+
+**Key Instructions & Guardrails:**
+1.  **Focus:** Implement *only* the specified "Must-Have" features and initial tasks. Do not add any other functionality or complexity at this stage.
+2.  **Simplicity:** Prioritise simplicity and speed. For this first pass, generate all necessary HTML, CSS, and JavaScript in a *single file* if appropriate for the chosen tech stack (e.g., for a simple HTML/CSS/JS prototype). If using a framework like Next.js, create the minimal necessary component files.
+3.  **Styling:** Apply basic styling consistent with the 'Desired UI/Brand Style'. Use placeholder content where necessary.
+4.  **No Backend:** Do not implement any backend logic, database connections, or user authentication unless it was explicitly listed as a 'Must-Have' *and* part of the initial granular tasks for a front-end mock.
+5.  **Clarification:** If any part of this request is unclear, or if you need to make an assumption to proceed with one of the initial tasks, please state your assumption and ask for clarification *before* writing extensive code.
+6.  **Output:** Provide the complete code for the initial file(s) created.
+
+Start with the first task: [Re-iterate the very first granular action from Build Kick-off Plan here]."
+
+---
+
+**How to Use This Prompt:**
+1.  Fill in the bracketed placeholders `[...]` with the outputs from your "Quickstart Context" and "Build Kick-off Plan" prompts.
+2.  Copy the entire "Instructions for the AI Building Tool" section.
+3.  Paste it directly into your chosen AI development tool, such as ChatGPT, Claude, Windsurf, or Cursor. This initial prompt will instruct the AI to implement only the *first* task.
+4.  Once the AI has completed the first task, carefully review and test its output.
+5.  To proceed with the next task from your 'Granular Action Plan', you can then instruct the AI with a follow-up prompt, for example: 'That looks good. Now, please implement the next task: [Clearly state the second task from your plan]'.
+6.  Continue this iterative process for each task, testing and confirming each step.
+
+**Expected Output from AI Tool:**
+The initial code for **only the very first granular action** of your Day 1 prototype, adhering to the guardrails. This gives you a tangible, testable starting point. You will then guide the AI to implement subsequent tasks from your plan one by one.
 ```
-You are an expert AI developer tasked with building the first prototype of a new product.
-
-Project Context (from Quickstart Context):
-- Problem: [Insert]
-- Target Audience: [Insert]
-- Core Solution Idea: [Insert]
-- Key Differentiator: [Insert]
-- Chosen Tech Stack: [Insert]
-- UI/Brand Style: [Insert] (e.g., “Modern & Clean” with: “minimalist UI dashboard, teal and grey, sans-serif font”)
-
-Build Plan (from Build Kick-off Plan):
-- Day 1 Prototype Goal: [Insert user journey]
-- MVP Must-Have Features:
-  - [Insert]
-  - [Insert]
-- Specific Initial Tasks:
-  - [Insert First Task]
-  - [Insert Second Task]
-
-Your Task:
-1. Implement **only the very first granular action**.
-2. Output complete code for this task.
-3. Ask for confirmation before proceeding.
-
-Key Guardrails:
-- Don’t build anything not in the task list
-- Use only the tech stack listed
-- Implement with simplicity and fast iteration in mind
-- Output minimal viable front-end (unless backend is in Must-Haves)
-- Follow style cues from UI section (fonts, layout, etc.)
-
-Start with:
-[Reiterate First Task Here]
-```
-
-**Example Usage**: When ready to ask ChatGPT or Cursor to start coding a new feature or UI.
-
-**Expected Output**: A clean, scoped prompt with all context and formatting AI tools need to start your prototype the right way.
-</details>
 
 ---
 
 
-## Validate
-
-<details>
-<summary><strong>Problem Interview Script</strong></summary>
+## Validate Prompts
 
 ### Problem Interview Script
 
-**Name**: Demand Validator
+**Purpose:** Helps you create a structured interview script to validate customer problems and needs.
 
-**Purpose**: Helps you run structured customer-problem interviews to validate real pain points before building a solution.
+**Goal:** Uncover real customer pain points before building solutions.
 
-**Goal**: Confirm that your problem hypothesis is valid and worth solving.
+**When to Use:** Early validation stage before committing resources to building a solution.
 
-**Inputs**: Problem hypothesis, target customer segment, current assumptions.
+**Prompt Text:**
 
-**Combine With**: JTBD Framework → Lean Canvas Builder
-
-**When to Use**: Before building anything, when you have a problem hypothesis but need validation.
-
-**Prompt**:
-```
-Act as a research facilitator helping me run a 30-minute problem interview to validate my business idea. Guide me through a structured conversation that uncovers genuine pain points without leading the interviewee or introducing bias.
+```markdown
+Help me create a problem interview script for customer discovery. I need to validate whether my target audience experiences the problem I think they have before I build a solution.
 
 First, ask me about:
 - The problem I believe exists
-- Who experiences this problem (my target customer)
-- My current assumptions about their pain points
-- What solutions they might be using today
-
-Then, help me create a 5-7 question interview script that:
-
-1. Starts with broad context questions about their role and workflow
-2. Naturally leads into discussion of the problem area without mentioning my solution
-3. Explores the severity and frequency of the problem
-4. Uncovers current workarounds and their limitations
-5. Quantifies impact (time/money lost, opportunities missed)
-6. Reveals willingness to pay for a solution
-
-For each question, explain:
-- Why you're including it
-- What signals to look for in their response
-- How to ask effective follow-ups without leading
-
-Finally, provide guidance on:
-- How to interpret different response patterns
-- Red flags that indicate this isn't a real problem
-- Green flags that suggest strong problem-solution fit
-- How many interviews I should conduct before drawing conclusions
-```
-
-**Example Usage**: When you have a business idea but aren't sure if the problem is painful enough to justify building a solution.
-
-**Expected Output**: A structured interview script with 5-7 questions, guidance on interpreting responses, and a framework for validating your problem hypothesis.
-</details>
-
-## Plan
-
-<details>
-<summary><strong>Tech Stack Advisor</strong></summary>
-
-### Tech Stack Advisor
-
-**Name**: CTO Tech Stack Advisor
-
-**Purpose**: Helps you select the optimal tech stack for your specific project needs, balancing technical considerations with business requirements.
-
-**Goal**: Make informed technology choices that align with your team's capabilities, timeline, and business objectives.
-
-**Inputs**: Project requirements, team skills, timeline, budget, scaling needs.
-
-**Combine With**: Architecture Outline → Repo & CI/CD Quick-Start
-
-**When to Use**: Early in planning when you need to make foundational technology decisions.
-
-**Prompt**:
-```
-Act as an experienced CTO advising me on selecting the ideal tech stack for my project. I need comprehensive guidance that considers all critical factors.
-
-First, ask me about:
-- The nature and purpose of my application
-- My target platforms (web, mobile, desktop)
-- Expected user base and scaling requirements
-- My team's current technical expertise
-- Timeline and budget constraints
-- Long-term maintenance considerations
-
-Then provide a structured recommendation that includes:
-
-1. Frontend technology options with pros/cons for my specific case
-2. Backend technology options with pros/cons for my specific case
-3. Database recommendations based on my data structure and access patterns
-4. Infrastructure and hosting considerations
-5. Development tools and workflow suggestions
-6. Trade-offs between different approaches (development speed vs. performance)
-
-For each recommendation, explain WHY it's suitable for my specific needs rather than just listing technologies. If there are multiple viable options, present them as alternatives with clear differentiators.
-
-Finally, provide a concise summary of your top recommendation as a cohesive stack, explaining how the components work together to meet my specific requirements.
-```
-
-**Example Usage**: When starting a new project and needing to decide between technologies like React vs. Flutter, Node.js vs. Django, SQL vs. NoSQL, etc.
-
-**Expected Output**: A personalized tech stack recommendation based on your specific project requirements, with clear explanations of the trade-offs and reasoning behind each choice.
-</details>
-
-<details>
-<summary><strong>Jobs To Be Done Framework</strong></summary>
-
-### Jobs To Be Done Framework
-
-**Name**: JTBD Framework Facilitator
-
-**Purpose**: Helps you apply the Jobs to be Done framework to understand the functional, emotional, and social jobs your users are trying to accomplish.
-
-**Goal**: Identify the real motivations behind user behavior to build solutions that address core needs.
-
-**Inputs**: Target user segment, problem space, current solutions.
-
-**Combine With**: Problem Interview Script → Lean Canvas Builder
-
-**When to Use**: Early in product development when you need to deeply understand user motivations beyond surface-level features.
-
-**Prompt**:
-```
-Help me apply the Jobs to be Done (JTBD) framework to understand what my users are truly trying to accomplish. Guide me through a comprehensive analysis of functional, emotional, and social jobs.
-
-First, ask me about:
-- My product or service concept
-- The target users I'm focusing on
-- The context in which they would use my solution
-- Current alternatives or workarounds they use
-
-Then, help me identify:
-
-1. Functional Jobs:
-   - What practical tasks are users trying to complete?
-   - What problems are they trying to solve?
-   - What needs are they trying to satisfy?
-   - What obstacles are they trying to overcome?
-
-2. Emotional Jobs:
-   - How do users want to feel when using the solution?
-   - What negative emotions are they trying to avoid?
-   - What gives them confidence or reassurance?
-   - What anxieties or frustrations are they trying to eliminate?
-
-3. Social Jobs:
-   - How do users want to be perceived by others?
-   - What relationships are they trying to build or maintain?
-   - How does this product affect their social identity?
-
-For each job category, help me formulate clear JTBD statements in the format:
-"When [situation], I want to [motivation], so I can [expected outcome]."
-
-Then guide me to:
-- Prioritize these jobs based on importance to users
-- Identify which jobs are underserved by current solutions
-- Map how my proposed solution addresses these jobs
-- Spot gaps where important jobs remain unaddressed
-```
-
-**Example Usage**: When defining product requirements or evaluating product-market fit for a new concept.
-
-**Expected Output**: A comprehensive JTBD analysis with prioritized job statements that reveal the true motivations behind user behavior, helping you build a more compelling solution.
-</details>
-
-<details>
-<summary><strong>Lean Canvas Builder</strong></summary>
-
-### Lean Canvas Builder
-
-**Name**: Business Model Architect
-
-**Purpose**: Helps you create a one-page business model using the Lean Canvas framework to validate your business concept quickly.
-
-**Goal**: Articulate and validate your business model assumptions in a structured format.
-
-**Inputs**: Problem, target customers, unique value proposition, solution ideas.
-
-**Combine With**: Problem Interview Script → Product Vision & Strategy
-
-**When to Use**: Early in the business planning process when you need to clarify and validate your business model.
-
-**Prompt**:
-```
-Help me create a comprehensive Lean Canvas for my business idea. Guide me through each section of the canvas to develop a clear, concise business model that I can validate with customers.
-
-First, ask me about:
-- The problem I'm trying to solve
-- My target customer segments
-- My initial solution ideas
-- My unique value proposition
-
-Then, help me complete each section of the Lean Canvas:
-
-1. Problem:
-   - The top 1-3 problems my target customers face
-   - Existing alternatives they currently use
-
-2. Customer Segments:
-   - My target customers and users
-   - Early adopters who will try my solution first
-
-3. Unique Value Proposition:
-   - Clear, compelling message that states why I'm different and worth buying
-   - How I connect customer pain to my solution
-
-4. Solution:
-   - The simplest solution that could address each problem
-   - Minimum viable product features
-
-5. Channels:
-   - Paths to reach my customers
-   - Which channels will work best for my specific customers
-
-6. Revenue Streams:
-   - Revenue model (subscription, one-time, etc.)
-   - Pricing strategy and lifetime value
-
-7. Cost Structure:
-   - Fixed and variable costs
-   - Customer acquisition costs
-
-8. Key Metrics:
-   - The numbers that tell me how my business is doing
-   - Activities I need to measure
-
-9. Unfair Advantage:
-   - Something that cannot be easily copied or bought
-   - My sustainable competitive advantage
-
-For each section, help me be specific, concise, and focused on testable assumptions. Challenge me to think critically about each element and how they fit together into a cohesive business model.
-```
-
-**Example Usage**: When developing a new business idea or startup concept that needs validation.
-
-**Expected Output**: A completed Lean Canvas with all nine sections filled out, highlighting key assumptions to test and providing a clear overview of your business model.
-
-## Launch
-
-<details>
-<summary><strong>Landing-Page Copy Crafter</strong></summary>
-
-### Landing-Page Copy Crafter
-
-**Name**: Conversion Copywriter
-
-**Purpose**: Helps you create compelling landing page copy that clearly communicates your value proposition and drives conversions.
-
-**Goal**: Maximize conversion rates by crafting persuasive, benefit-focused copy that resonates with your target audience.
-
-**Inputs**: Product details, target audience, key benefits, desired action.
-
-**Combine With**: Pricing Page Optimiser → Objection-Handling FAQ Builder
-
-**When to Use**: When preparing to launch a product or service and need high-converting landing page copy.
-
-**Prompt**:
-```
-Help me craft compelling landing page copy that clearly communicates my value proposition and drives conversions. Guide me through creating all essential copy elements for a high-converting page.
-
-First, ask me about:
-- My product/service and its core value proposition
-- My target audience and their key pain points
-- The primary benefits and features of my offering
-- The specific action I want visitors to take
-- Any unique selling points or differentiators
-- Brand voice and tone preferences
+- My target audience
+- My hypotheses about their pain points
+- What I've observed so far
 
 Then, help me create:
 
-1. Headline and subheadline:
-   - Attention-grabbing main headline that addresses the primary pain point
-   - Supporting subheadline that expands on the value proposition
-   - Alternative versions to test for effectiveness
+1. Introduction script (30-60 seconds)
+   - How to introduce myself and the purpose of the interview
+   - How to establish rapport and set expectations
+   - How to address confidentiality
 
-2. Hero section copy:
-   - Clear, concise description of what I'm offering
-   - Primary benefit statement that resonates with the target audience
-   - Call-to-action text that creates urgency and clarity
+2. Background questions (2-3 minutes)
+   - Questions about their role, responsibilities, and context
+   - Questions that help me understand their environment
 
-3. Feature-benefit blocks:
-   - Compelling feature headlines that focus on outcomes, not features
-   - Benefit-focused descriptions that connect features to user value
-   - Supporting social proof elements or statistics
+3. Problem exploration questions (10-15 minutes)
+   - Open-ended questions about their challenges
+   - Questions about how they currently solve these problems
+   - Questions about the impact of these problems
+   - Questions that reveal frequency and severity
 
-4. Objection-handling statements:
-   - Copy that addresses common concerns or hesitations
-   - Trust-building elements (guarantees, testimonials, etc.)
-   - Risk-reversal statements
+4. Solution exploration questions (5 minutes)
+   - Questions about what an ideal solution would look like
+   - Questions about what they've tried before
+   - Questions about what would make a solution valuable to them
 
-5. Final call-to-action section:
-   - Compelling closing argument for taking action
-   - Clear next steps with benefit-focused CTA button text
-   - Urgency or scarcity elements if appropriate
+5. Wrap-up questions (2 minutes)
+   - Questions to ensure I haven't missed anything important
+   - Questions about who else I should talk to
 
-For each section, provide multiple options where appropriate, and explain the psychological principles behind effective copy choices.
+6. Next steps script (1 minute)
+   - How to thank them for their time
+   - How to explain what happens next
+   - How to ask for permission to follow up
+
+Please include follow-up prompts and clarifying questions for each section to help me dig deeper when needed. Also, include tips for active listening and avoiding leading questions.
 ```
 
-**Example Usage**: When creating a landing page for a new product launch, feature release, or marketing campaign.
+---
 
-**Expected Output**: Complete, conversion-focused landing page copy including headline, subheadline, feature descriptions, benefit statements, and compelling calls to action.
-</details>
-
-<details>
-<summary><strong>Pricing Page Optimiser</strong></summary>
-
-### Pricing Page Optimiser
-
-**Name**: Pricing Strategy Architect
-
-**Purpose**: Helps you design an effective pricing page that maximizes conversions and communicates value clearly.
-
-**Goal**: Create a pricing structure and page that balances revenue optimization with conversion rate.
-
-**Inputs**: Product/service details, target audience, competitive pricing, business goals.
-
-**Combine With**: Landing-Page Copy Crafter → Objection-Handling FAQ Builder
-
-**When to Use**: When launching a product or service and need to create or optimize your pricing strategy and presentation.
-
-**Prompt**:
-```
-Help me design an effective pricing page that clearly communicates my value proposition and optimizes for conversions. Guide me through creating a pricing strategy and page layout that maximizes both revenue and customer acquisition.
-
-First, ask me about:
-- My product/service and its key value metrics
-- My target customer segments and their willingness to pay
-- Competitive pricing in my market
-- My business goals (maximize revenue, market share, etc.)
-- Any existing pricing model or constraints
-
-Then, help me develop:
-
-1. A strategic pricing structure:
-   - Recommended pricing tiers (Free, Basic, Pro, Enterprise, etc.)
-   - Feature allocation across tiers
-   - Price points with psychological pricing tactics
-   - Billing frequency options (monthly/annual with discount)
-
-2. Value-focused presentation:
-   - Clear, benefit-oriented tier names
-   - Feature descriptions that emphasize value, not just functionality
-   - Visual hierarchy to highlight key differentiators
-   - Social proof elements to incorporate
-
-3. Conversion optimization elements:
-   - Recommended tier to highlight as "Most Popular"
-   - Free trial or money-back guarantee positioning
-   - Call-to-action button copy for each tier
-   - Urgency or scarcity elements if appropriate
-
-4. Objection handling:
-   - Common pricing objections and how to address them
-   - FAQ items to include near pricing
-   - Trust signals to incorporate
-
-Provide specific copy examples for each section of the pricing page, and explain the psychological principles behind your recommendations.
-```
-
-**Example Usage**: When launching a SaaS product, membership site, or service offering with multiple tiers.
-
-**Expected Output**: A complete pricing strategy with tier structure, feature allocation, price points, and page layout recommendations optimized for conversions.
-</details>
-
-<details>
-<summary><strong>Objection-Handling FAQ Builder</strong></summary>
-
-### Objection-Handling FAQ Builder
-
-**Name**: Conversion Obstacle Remover
-
-**Purpose**: Helps you identify and address common objections that prevent users from converting, through strategic FAQ content.
-
-**Goal**: Increase conversion rates by proactively addressing concerns and building trust.
-
-**Inputs**: Product details, target audience, current conversion data, known objections.
-
-**Combine With**: Landing-Page Copy Crafter → Pricing Page Optimiser
-
-**When to Use**: When preparing to launch a product or optimizing an existing one with low conversion rates.
-
-**Prompt**:
-```
-Help me create a strategic FAQ section that addresses common objections and increases conversion rates. Guide me through identifying and answering the questions that are preventing my users from taking action.
-
-First, ask me about:
-- My product/service and its core value proposition
-- My target audience and their typical concerns
-- Current conversion data and drop-off points
-- Known objections from customer interactions
-- Competitive alternatives users might consider
-
-Then, help me develop:
-
-1. Objection categories to address:
-   - Price/value concerns
-   - Product capabilities and limitations
-   - Implementation or usage concerns
-   - Security and privacy considerations
-   - Support and service questions
-   - Comparison with alternatives
-
-2. Strategic question framing:
-   - How to phrase questions from the customer's perspective
-   - How to group related questions for clarity
-   - Which objections to prioritize based on impact
-   - When to use positive vs. neutrally framed questions
-
-3. Persuasive answer techniques:
-   - How to acknowledge concerns while redirecting to benefits
-   - When to use social proof or testimonials in answers
-   - How to incorporate guarantees or risk-reversals
-   - Balancing honesty with positive positioning
-
-4. FAQ presentation strategy:
-   - Optimal organization and hierarchy
-   - Expandable vs. always-visible answers
-   - Placement on the page for maximum impact
-   - Visual elements to enhance credibility
-
-For each objection category, help me craft 3-5 specific questions with persuasive, conversion-focused answers that build trust while addressing concerns.
-```
-
-**Example Usage**: When launching a product or optimizing an existing page with low conversion rates.
-
-**Expected Output**: A strategic FAQ section with carefully crafted questions and persuasive answers that address key objections and increase conversion rates.
-</details>
-
-## Grow & Iterate
-
-<details>
-<summary><strong>Growth Experiment Generator</strong></summary>
-
-### Growth Experiment Generator
-
-**Name**: Growth Hypothesis Builder
-
-**Purpose**: Helps you design structured growth experiments to systematically improve acquisition, activation, retention, revenue, and referral metrics.
-
-**Goal**: Create data-driven growth strategies through rapid experimentation and learning.
-
-**Inputs**: Current metrics, target metrics, audience segments, available channels.
-
-**Combine With**: KPI Dashboard Prompt → Retrospective Facilitator
-
-**When to Use**: When you need to improve specific growth metrics and want to take a systematic, experimental approach.
-
-**Prompt**:
-```
-Help me design structured growth experiments to improve my key metrics. Guide me through creating well-defined experiments using the ICE framework (Impact, Confidence, Ease) that will drive measurable results.
-
-First, ask me about:
-- The specific growth metric I'm trying to improve (acquisition, activation, retention, revenue, or referral)
-- Current performance baseline and target goals
-- My target audience segments
-- Available channels and touchpoints
-- Previous experiments or tactics I've tried
-- Resources and constraints for implementation
-
-Then, help me generate 5-7 experiment ideas that:
-
-1. Have clear hypotheses in the format:
-   "If we [make this change], then [this metric] will [increase/decrease] by [amount] because [reason]."
-
-2. Are prioritized using the ICE framework:
-   - Impact: Potential effect on the target metric (1-10)
-   - Confidence: Likelihood of success based on evidence (1-10)
-   - Ease: Simplicity of implementation with available resources (1-10)
-
-3. Include detailed implementation plans:
-   - Specific changes to make
-   - Required resources and timeline
-   - Success metrics and measurement approach
-   - Minimum viable test to validate the hypothesis
-
-4. Address different approaches:
-   - Messaging/copy changes
-   - UX/design modifications
-   - Channel or targeting adjustments
-   - Incentive or pricing experiments
-   - Feature or product enhancements
-
-For each experiment, help me define success criteria, potential risks, and a plan for analyzing results and determining next steps based on outcomes.
-```
-
-**Example Usage**: When you need to improve conversion rates, reduce churn, increase average order value, or boost user acquisition.
-
-**Expected Output**: A prioritized list of 5-7 growth experiments with clear hypotheses, implementation plans, and measurement approaches.
-</details>
-
-<details>
-<summary><strong>Retrospective Facilitator</strong></summary>
-
-### Retrospective Facilitator
-
-**Name**: Team Learning Catalyst
-
-**Purpose**: Helps you conduct effective retrospectives that identify actionable improvements for your team and product.
-
-**Goal**: Extract meaningful insights and create concrete action items to improve processes and outcomes.
-
-**Inputs**: Sprint/release outcomes, team feedback, challenges faced, successes achieved.
-
-**Combine With**: Growth Experiment Generator → KPI Dashboard Prompt
-
-**When to Use**: At the end of a sprint, project milestone, or product release to reflect and improve.
-
-**Prompt**:
-```
-Help me facilitate an effective retrospective that identifies actionable improvements for our team and product. Guide me through a structured process that extracts meaningful insights and creates concrete next steps.
-
-First, ask me about:
-- The timeframe we're reviewing (sprint, release, quarter, etc.)
-- Team size and composition
-- Key metrics and outcomes from this period
-- Any significant events or challenges
-- Previous retrospective action items and their status
-
-Then, help me structure a retrospective that includes:
-
-1. Reflection prompts to gather insights:
-   - What went well? (Celebrate successes)
-   - What didn't go as planned? (Identify challenges)
-   - What did we learn? (Extract insights)
-   - What still puzzles us? (Surface uncertainties)
-
-2. Root cause analysis for key issues:
-   - Techniques to dig deeper than symptoms
-   - Ways to identify systemic vs. one-off problems
-   - Methods to separate process issues from technical/product issues
-
-3. Action item generation:
-   - Criteria for effective action items (specific, measurable, assigned, realistic, time-bound)
-   - Prioritization framework for improvements
-   - Balance between process, technical, and team improvements
-
-4. Follow-through mechanisms:
-   - Accountability structures
-   - Integration with existing workflows
-   - Measurement approaches for improvements
-
-Provide specific facilitation techniques, example questions, and templates I can use to run an engaging retrospective that results in meaningful improvements.
-```
-
-**Example Usage**: When completing a sprint, shipping a feature, or reaching a project milestone and wanting to improve team effectiveness.
-
-**Expected Output**: A structured retrospective plan with specific prompts, activities, and templates to facilitate team reflection and generate actionable improvements.
-</details>
-
-<details>
-<summary><strong>KPI Dashboard Prompt</strong></summary>
-
-### KPI Dashboard Prompt
-
-**Name**: Metrics Framework Designer
-
-**Purpose**: Helps you design a comprehensive KPI dashboard that tracks the right metrics for your business objectives.
-
-**Goal**: Create a focused measurement system that drives decision-making and continuous improvement.
-
-**Inputs**: Business objectives, user journey, current data sources, stakeholder needs.
-
-**Combine With**: Growth Experiment Generator → Retrospective Facilitator
-
-**When to Use**: When setting up analytics for a new product or refining measurement for an existing one.
-
-**Prompt**:
-```
-Help me design a comprehensive KPI dashboard that tracks the right metrics for my business objectives. Guide me through creating a focused measurement system that drives decision-making and continuous improvement.
-
-First, ask me about:
-- My core business objectives and success criteria
-- Key stages in my user/customer journey
-- Available data sources and tracking capabilities
-- Stakeholders who will use the dashboard
-- Current metrics I'm tracking (if any)
-
-Then, help me develop:
-
-1. A balanced metrics framework:
-   - North Star Metric that aligns with business success
-   - Supporting metrics organized by business function
-   - Leading vs. lagging indicators
-   - Vanity metrics to avoid or contextualize
-
-2. User journey metrics:
-   - Acquisition metrics (traffic sources, conversion rates)
-   - Activation metrics (onboarding completion, initial value)
-   - Retention metrics (churn, engagement frequency)
-   - Revenue metrics (ARPU, LTV, conversion rates)
-   - Referral metrics (virality, NPS, testimonials)
-
-3. Operational metrics:
-   - Product quality metrics (bugs, uptime, performance)
-   - Team velocity metrics (cycle time, deployment frequency)
-   - Customer service metrics (response time, resolution rate)
-   - Cost metrics (CAC, operational expenses)
-
-4. Dashboard implementation plan:
-   - Recommended visualization for each metric
-   - Dashboard organization and hierarchy
-   - Frequency of updates and reviews
-   - Alerting thresholds for key metrics
-
-For each metric, help me define the formula, data sources, targets/benchmarks, and how it connects to business objectives.
-```
-
-**Example Usage**: When setting up analytics for a new product or refining measurement for an existing one.
-
-**Expected Output**: A comprehensive KPI framework with North Star and supporting metrics, visualization recommendations, and implementation guidelines tailored to your business objectives.
-</details>
-
-<details>
-<summary><strong>Product Vision & Strategy</strong></summary>
-
-### Product Vision & Strategy
-
-**Name**: Product Vision Architect
-
-**Purpose**: Helps you articulate a clear, compelling vision and strategy for your product that aligns with business goals and user needs.
-
-**Goal**: Create a north star that guides all product decisions and communicates value to stakeholders.
-
-**Inputs**: Problem space, target users, market landscape, business goals.
-
-**Combine With**: Lean Canvas Builder → Roadmap Milestone Planner
-
-**When to Use**: When initiating a new product or pivoting an existing one.
-
-**Prompt**:
-```
-Help me define a clear, compelling vision and strategy for my product. Guide me through a structured process that will result in a comprehensive product strategy document.
-
-First, ask me about:
-- The core problem my product aims to solve
-- My target users and their key pain points
-- The market landscape and competitive environment
-- My business goals and constraints
-
-Then, help me develop:
-
-1. A concise product vision statement that articulates:
-   - What the product is and who it's for
-   - The key value proposition and differentiators
-   - The long-term aspiration and impact
-
-2. A comprehensive product strategy that includes:
-   - Core user personas and their journeys
-   - Key product pillars and principles
-   - Critical features and capabilities (prioritized)
-   - Success metrics and KPIs
-
-3. A high-level roadmap framework that outlines:
-   - Major phases or milestones
-   - Key dependencies and decision points
-   - Resource implications and constraints
-
-Throughout this process, challenge my assumptions, identify potential blind spots, and help me ensure the strategy is both ambitious and achievable given my constraints.
-```
-
-**Example Usage**: When defining the strategic direction for a new product or major feature initiative.
-
-**Expected Output**: A comprehensive product vision and strategy document that articulates what you're building, why it matters, and how you'll approach it.
-</details>
-
-<details>
-<summary><strong>User Story Map</strong></summary>
-
-### User Story Map
-
-**Name**: User Journey Architect
-
-**Purpose**: Helps you create a visual, structured map of user activities, tasks, and stories to plan your product development.
-
-**Goal**: Organize user needs into a coherent journey that can be sliced into logical releases.
-
-**Inputs**: User personas, core user goals, product scope.
-
-**Combine With**: Product Vision & Strategy → MUST-SHOULD-COULD Prioritiser
-
-**When to Use**: When planning product features and releases to ensure they deliver complete user value.
-
-**Prompt**:
-```
-Help me create a comprehensive user story map for my product. Guide me through the process of identifying user activities, breaking them down into tasks, and organizing them into a coherent journey.
-
-First, ask me about:
-- The primary user personas for my product
-- The main goals these users are trying to achieve
-- The overall scope and boundaries of the product
-
-Then, help me build the story map by:
-
-1. Identifying the major user activities (backbone):
-   - The high-level activities users perform to achieve their goals
-   - The logical sequence of these activities from left to right
-   - Any parallel activities that might happen simultaneously
-
-2. Breaking down each activity into specific user tasks:
-   - Detailed tasks that users complete within each activity
-   - Arranged vertically under each activity
-   - Prioritized from top to bottom by importance
-
-3. Converting tasks into user stories:
-   - Formatted as "As a [user], I want to [action], so that [benefit]"
-   - Including acceptance criteria for each story
-   - Identifying dependencies between stories
-
-4. Organizing stories into releases or slices:
-   - What's the minimum viable product that delivers end-to-end value?
-   - What are logical feature increments for subsequent releases?
-   - How can we ensure each release provides complete user value?
-
-Provide guidance on how to use this story map for sprint planning, feature prioritization, and communicating with stakeholders.
-```
-
-**Example Usage**: When planning product development to ensure features are organized around user needs and journeys.
-
-**Expected Output**: A structured user story map with backbone activities, detailed tasks, user stories, and release planning that aligns with user goals.
-</details>
-
-<details>
-<summary><strong>Roadmap Milestone Planner</strong></summary>
-
-### Roadmap Milestone Planner
-
-**Name**: Strategic Roadmap Architect
-
-**Purpose**: Helps you create a flexible, outcome-focused product roadmap organized around key milestones rather than fixed deadlines.
-
-**Goal**: Develop a strategic roadmap that communicates direction while maintaining adaptability.
-
-**Inputs**: Product vision, prioritized features, resource constraints, business objectives.
-
-**Combine With**: Product Vision & Strategy → MUST-SHOULD-COULD Prioritiser
-
-**When to Use**: When planning product development over multiple months or quarters and need to communicate direction to stakeholders.
-
-**Prompt**:
-```
-Help me develop a flexible, outcome-focused product roadmap organized around key milestones rather than fixed deadlines. Guide me through creating a strategic plan that communicates direction while maintaining adaptability.
-
-First, ask me about:
-- My product vision and strategic objectives
-- Key hypotheses I need to validate
-- Available resources and constraints
-- Target timeline horizon (3 months, 6 months, 1 year+)
-- Key business objectives and success criteria
-
-Then, help me develop a lean roadmap by:
-
-1. Defining clear milestone outcomes:
-   - What specific hypotheses will each milestone validate?
-   - What user/business value will each milestone deliver?
-   - How does each milestone build toward the larger vision?
-
-2. Organizing features into thematic milestones:
-   - How to group features by related user/business outcomes
-   - How to sequence milestones in logical progression
-   - How to balance quick wins with longer-term investments
-
-3. Setting realistic timeframes:
-   - How to estimate milestone durations without committing to specific dates
-   - Using time horizons (Now, Next, Later) instead of fixed deadlines
-   - Building in buffer for unexpected challenges
-
-4. Communicating confidence levels:
-   - How to indicate certainty vs. uncertainty in the roadmap
-   - When to use specific timeframes vs. relative positioning
-   - How to set appropriate stakeholder expectations
-
-5. Building in feedback loops and pivot points:
-   - When and how will we evaluate progress against our metrics?
-   - What criteria would trigger a pivot or change in direction?
-   - How will we incorporate learning into subsequent milestones?
-
-Provide guidance on how to present this roadmap to different stakeholders (executives, team members, customers) and how to maintain it as a living document.
-```
-
-**Example Usage**: When planning product development over multiple quarters and need to communicate direction to stakeholders.
-
-**Expected Output**: A flexible, outcome-focused roadmap with clear milestones, success metrics, and appropriate time horizons that can adapt to changing conditions.
-</details>
-
-## Build
-
-<details>
-<summary><strong>Repo & CI/CD Quick-Start</strong></summary>
-
-### Repo & CI/CD Quick-Start
-
-**Name**: DevOps Bootstrapper
-
-**Purpose**: Helps you quickly set up a professional repository with proper structure and continuous integration/deployment pipeline.
-
-**Goal**: Create a production-ready development environment with automated testing and deployment.
-
-**Inputs**: Project type, tech stack, hosting preferences, team size.
-
-**Combine With**: Architecture Outline → Testing Strategy
-
-**When to Use**: At the beginning of a project when setting up the development infrastructure.
-
-**Prompt**:
-```
-Help me set up a professional repository structure with CI/CD pipeline for my project. Guide me through creating a well-organized codebase with automated testing and deployment.
-
-First, ask me about:
-- The type of project (web app, mobile app, API, etc.)
-- The tech stack and frameworks I'm using
-- My preferred hosting/deployment platform
-- Team size and collaboration needs
-- Testing requirements and preferences
-
-Then, help me implement:
-
-1. Repository structure and organization:
-   - Recommended folder structure for my tech stack
-   - Essential configuration files (.gitignore, README, etc.)
-   - Environment configuration approach (.env, config files)
-   - Dependency management best practices
-
-2. GitHub repository setup:
-   - Branch protection rules
-   - Pull request templates
-   - Issue templates
-   - GitHub Actions workflow files
-   - Security scanning and linting
-
-3. CI/CD pipeline configuration:
-   - Automated testing setup
-   - Build process optimization
-   - Deployment workflow (staging, production)
-   - Environment variable management
-   - Rollback procedures
-
-4. Documentation essentials:
-   - README.md with clear setup instructions
-   - CONTRIBUTING.md guidelines
-   - Architecture documentation
-   - Local development guide
-
-Provide specific code snippets and configuration files tailored to my tech stack and hosting platform, with explanations of each component and why it's important.
-```
-
-**Example Usage**: When starting a new project and wanting to establish professional DevOps practices from day one.
-
-**Expected Output**: Complete repository structure with CI/CD configuration files, GitHub templates, and documentation tailored to your specific tech stack and hosting platform.
-</details>
-
-<details>
-<summary><strong>Design System Starter</strong></summary>
-
-### Design System Starter
-
-**Name**: UI System Architect
-
-**Purpose**: Helps you create a foundational design system for your product with consistent components, styles, and usage guidelines.
-
-**Goal**: Establish a cohesive visual language that improves user experience and development efficiency.
-
-**Inputs**: Brand identity, target platforms, technical constraints, user needs.
-
-**Combine With**: Feature Implementation Planner → Architecture Outline
-
-**When to Use**: Early in the development process when establishing your product's visual identity and UI patterns.
-
-**Prompt**:
-```
-Help me create a foundational design system for my product with consistent components, styles, and usage guidelines. Guide me through establishing a cohesive visual language that will improve both user experience and development efficiency.
-
-First, ask me about:
-- My product's brand identity and values
-- Target platforms (web, mobile, desktop)
-- Technical constraints or framework preferences
-- User needs and accessibility requirements
-- Any existing design elements or preferences
-
-Then, help me develop:
-
-1. Core design tokens:
-   - Color palette (primary, secondary, accent, neutrals)
-   - Typography system (font families, sizes, weights, line heights)
-   - Spacing and layout grid system
-   - Elevation/shadow system
-   - Border radiuses and other global styles
-
-2. Component library foundation:
-   - Essential UI components to start with
-   - Component variants and states
-   - Component hierarchy and composition patterns
-   - Responsive behavior guidelines
-
-3. Usage guidelines and principles:
-   - When to use specific components
-   - Accessibility standards to follow
-   - Naming conventions and organization
-   - Documentation structure
-
-4. Implementation approach:
-   - Technical architecture recommendations
-   - How to structure the code
-   - Integration with development workflow
-   - Versioning and maintenance strategy
-
-Provide specific examples and code snippets where appropriate, tailored to my technical stack and platform requirements.
-```
-
-**Example Usage**: When starting a new product or redesigning an existing one and need to establish consistent design patterns.
-
-**Expected Output**: A comprehensive design system foundation with color palettes, typography, component specifications, and implementation guidelines tailored to your product's needs.
-</details>
-
-<details>
-<summary><strong>MUST-SHOULD-COULD Prioritiser</strong></summary>
-
-### MUST-SHOULD-COULD Prioritiser
-
-**Name**: Feature Prioritisation Framework
-
-**Purpose**: Helps you objectively prioritize features and requirements using the MoSCoW method (Must, Should, Could, Won't).
-
-**Goal**: Create a balanced, achievable scope that delivers maximum value with available resources.
-
-**Inputs**: Feature list, business objectives, timeline constraints, available resources.
-
-**Combine With**: User Story Map → PRD Generator
-
-**When to Use**: When planning a release or sprint and need to make tough scope decisions.
-
-**Prompt**:
-```
-Help me prioritize my product features using the MoSCoW method (Must have, Should have, Could have, Won't have). Guide me through a structured decision-making process that balances user needs, business goals, and resource constraints.
-
-First, ask me about:
-- The complete list of features/requirements I'm considering
-- My core business objectives for this release
-- Timeline constraints and deadlines
-- Available resources (team size, skills, budget)
-- Any non-negotiable requirements (legal, security, etc.)
-
-Then, help me categorize each feature into:
-
-1. MUST have:
-   - Core features without which the product cannot function
-   - Features that directly address primary user needs
-   - Features that deliver the main business value
-   - Non-negotiable requirements (legal, security, etc.)
-
-2. SHOULD have:
-   - Important features that significantly enhance the product
-   - Features with high value but potential workarounds
-   - Differentiators from competitors
-
-3. COULD have:
-   - Nice-to-have features that add value but aren't essential
-   - Features that could be deferred to later releases
-   - Features with lower ROI or higher implementation cost
-
-4. WON'T have (this time):
-   - Features explicitly excluded from current scope
-   - Features to reconsider in future releases
-   - Low-value features relative to implementation effort
-
-For each feature, help me assess:
-- User impact (high/medium/low)
-- Business value (high/medium/low)
-- Implementation effort (high/medium/low)
-- Risk of exclusion (high/medium/low)
-
-Finally, provide a summary of the prioritized features with clear rationale for each category, and highlight any potential risks or dependencies between features.
-```
-
-**Example Usage**: When planning an MVP or defining scope for a release with limited resources.
-
-**Expected Output**: A prioritized feature list organized into MUST, SHOULD, COULD, and WON'T categories with clear rationale for each decision.
-</details>
-
-<details>
-<summary><strong>Architecture Outline</strong></summary>
-
-### Architecture Outline
-
-**Name**: System Architecture Designer
-
-**Purpose**: Helps you design a robust, scalable architecture for your application that meets both functional and non-functional requirements.
-
-**Goal**: Create a clear architectural blueprint that guides implementation and ensures system quality.
-
-**Inputs**: Application requirements, expected scale, technical constraints, team expertise.
-
-**Combine With**: Tech Stack Advisor → Feature Implementation Planner
-
-**When to Use**: Early in the development process when making foundational architectural decisions.
-
-**Prompt**:
-```
-Help me design a robust, scalable architecture for my application that meets both functional and non-functional requirements. Guide me through creating a clear architectural blueprint that will guide implementation and ensure system quality.
-
-First, ask me about:
-- The core purpose and functionality of my application
-- Expected scale and performance requirements
-- Security and compliance considerations
-- Technical constraints and preferences
-- Team size and expertise
-
-Then, help me develop:
-
-1. High-level architecture overview:
-   - Recommended architectural style (microservices, monolith, serverless, etc.)
-   - System boundaries and major components
-   - Data flow between components
-   - Key interfaces and integration points
-
-2. Component breakdown:
-   - Core services/modules and their responsibilities
-   - Data storage strategy and database choices
-   - API design principles and patterns
-   - Authentication and authorization approach
-
-3. Non-functional considerations:
-   - Scalability approach (vertical vs. horizontal)
-   - Performance optimization strategies
-   - Security measures and best practices
-   - Monitoring and observability plan
-
-4. Implementation guidance:
-   - Suggested folder/code organization
-   - Key design patterns to apply
-   - Potential technical challenges and solutions
-   - Phased implementation approach
-
-Provide diagrams or pseudocode where appropriate to illustrate the architecture, and explain the rationale behind each major decision.
-```
-
-**Example Usage**: When starting a new project or planning a significant system redesign and need to establish a solid architectural foundation.
-
-**Expected Output**: A comprehensive architectural blueprint with component diagrams, data flows, technology choices, and implementation guidelines tailored to your specific application needs.
-</details>
-
-<details>
-<summary><strong>Feature Implementation Planner</strong></summary>
-
-### Feature Implementation Planner
-
-**Name**: Feature Development Strategist
-
-**Purpose**: Helps you plan the implementation of a specific feature with detailed tasks, code structure, and testing approach.
-
-**Goal**: Create a comprehensive implementation plan that ensures efficient, high-quality feature delivery.
-
-**Inputs**: Feature requirements, tech stack, existing codebase structure, team capabilities.
-
-**Combine With**: Architecture Outline → Testing Strategy
-
-**When to Use**: When starting work on a new feature or major enhancement and need a detailed implementation plan.
-
-**Prompt**:
-```
-Help me plan the implementation of a specific feature with detailed tasks, code structure, and testing approach. Guide me through creating a comprehensive plan that ensures efficient, high-quality delivery.
-
-First, ask me about:
-- The specific feature or capability I'm implementing
-- My tech stack and development environment
-- Existing codebase structure and patterns
-- Any constraints or requirements to consider
-- Team size and expertise
-
-Then, help me develop:
-
-1. Feature breakdown:
-   - Core components and their relationships
-   - UI/UX considerations
-   - Data requirements and models
-   - API endpoints or interfaces needed
-
-2. Implementation steps:
-   - Logical task breakdown with dependencies
-   - Suggested implementation order
-   - Potential technical challenges and solutions
-   - Estimated effort for each task
-
-3. Code structure:
-   - Files and modules to create or modify
-   - Key classes/functions and their responsibilities
-   - Data flow between components
-   - Reusable patterns or utilities
-
-4. Testing strategy:
-   - Unit test coverage plan
-   - Integration test scenarios
-   - Edge cases to consider
-   - Manual testing checklist
-
-Provide specific guidance, pseudocode, or examples that are directly applicable to my tech stack and feature requirements.
-```
-
-**Example Usage**: When starting work on a new feature or major enhancement and need a detailed implementation plan.
-
-**Expected Output**: A comprehensive feature implementation plan with specific tasks, code structure recommendations, testing strategies, and implementation guidelines tailored to your tech stack.
-</details>
-
-<details>
-<summary><strong>PRD Generator</strong></summary>
-
-### PRD Generator
-
-**Name**: Product Requirements Architect
-
-**Purpose**: Helps you create a comprehensive product requirements document (PRD) that clearly defines what you're building and why.
-
-**Goal**: Transform product vision into detailed, actionable requirements for the development team.
-
-**Inputs**: Product vision, user needs, prioritized features, constraints.
-
-**Combine With**: MUST-SHOULD-COULD Prioritiser → Tech Stack Advisor
-
-**When to Use**: After defining your product vision and before starting development.
-
-**Prompt**:
-```
-Help me create a comprehensive Product Requirements Document (PRD) that clearly defines what we're building and why. Guide me through documenting all essential aspects of the product in a format that's clear for both business and technical stakeholders.
-
-First, ask me about:
-- The product vision and core value proposition
-- Target users and their primary needs
-- Key features and functionality (prioritized)
-- Business objectives and success metrics
-- Technical constraints or requirements
-
-Then, help me structure a PRD that includes:
-
-1. Executive Summary:
-   - Product overview and purpose
-   - Target audience
-   - Key value propositions
-   - Success metrics
-
-2. User Stories and Requirements:
-   - User personas
-   - Core user journeys
-   - Functional requirements (organized by feature)
-   - Non-functional requirements (performance, security, etc.)
-
-3. Feature Specifications:
-   - Detailed descriptions of each feature
-   - User interactions and flows
-   - Business rules and edge cases
-   - Acceptance criteria
-
-4. Technical Considerations:
-   - System architecture implications
-   - API requirements
-   - Data requirements
-   - Integration points
-
-5. Implementation Guidelines:
-   - Development phases and milestones
-   - Dependencies and constraints
-   - Potential risks and mitigations
-
-For each section, provide a structured template with examples that I can easily adapt to my specific product.
-```
-
-**Example Usage**: When transitioning from product concept to development and need to create clear requirements for your team.
-
-**Expected Output**: A structured PRD template with all essential sections filled in based on your product details, ready to share with stakeholders and development teams.
-</details>
-
-<details>
-<summary><strong>Audience & Needs Analysis</strong></summary>
 
 ### Audience & Needs Analysis
 
-**Name**: User Needs Explorer
+**Purpose:** To deeply understand your target audience, their needs, pain points, and motivations.
 
-**Purpose**: Helps you identify and understand your target audience segments and their specific needs, pain points, and motivations.
+**Goal:** A clear profile of your ideal customer and a prioritized list of their unmet needs.
 
-**Goal**: Create detailed user segments with validated needs to inform product decisions.
+**When to Use:** Before designing solutions, to ensure you're solving real problems for the right people.
 
-**Inputs**: Industry, problem space, initial audience hypotheses, any existing research.
+**Prompt Text:**
 
-**Combine With**: Problem Interview Script → JTBD Framework
-
-**When to Use**: Early in product planning when defining who you're building for and what problems you're solving.
-
-**Prompt**:
-```
-Help me conduct a thorough analysis of my target audience and their needs. Guide me through a structured process to identify specific user segments, their pain points, and how my product can address them.
+```markdown
+Help me conduct a comprehensive audience and needs analysis for [product/service concept]. I need to clearly identify my target audience segments and understand their specific needs.
 
 First, ask me about:
-- The general market or domain my product serves
-- Any initial hypotheses I have about potential user segments
-- Problems I believe exist in this space
-- Competitive or alternative solutions users currently employ
+- The general problem space I'm addressing
+- Any initial hypotheses about who my users might be
+- Preliminary research or observations I've already gathered
+- The market or industry context
 
-Then, help me:
+Then, guide me through:
 
-1. Define 3-5 distinct user segments with demographic and psychographic characteristics
-2. For each segment, identify:
-   - Their current challenges and pain points (prioritized by severity)
-   - Their goals and desired outcomes
-   - Their current workarounds or alternative solutions
-   - Key motivations and decision factors
+1. Audience Segmentation
+   - Help me identify 2-4 distinct audience segments
+   - For each segment, define demographic, psychographic, and behavioral characteristics
+   - Help me prioritize these segments based on market size, accessibility, and fit with my solution
 
-3. Create provisional user personas for the primary segments, including:
-   - Background and context
-   - Needs hierarchy
-   - Key quotes or sentiments
+2. Needs Assessment for Each Segment
+   - What are their primary goals and motivations?
+   - What pain points or challenges do they face?
+   - What are their current alternatives or workarounds?
+   - What would success look like from their perspective?
 
-4. Map how my product concept could address each segment's specific needs
-5. Identify gaps where additional research is needed
+3. Opportunity Mapping
+   - Which needs are most urgent or important?
+   - Which needs are currently underserved by existing solutions?
+   - Where do the needs of different segments overlap?
+   - Which needs align best with my capabilities and vision?
 
-Challenge my assumptions throughout this process and help me identify potential blind spots in my understanding of users. The output should be a comprehensive audience analysis that can inform product decisions.
+4. Validation Plan
+   - Suggest methods to validate these audience insights
+   - Help me draft 5-7 key questions to ask potential users
+   - Identify where to find representatives of each segment
+   - Outline criteria for confirming or revising my audience hypotheses
+
+Please be specific and actionable in your recommendations, avoiding generic advice. Challenge any assumptions that seem unvalidated, and suggest concrete next steps for deepening my understanding of these audience segments.
 ```
 
-**Example Usage**: When defining who your product serves and what specific problems it solves for them.
+---
 
-**Expected Output**: A detailed analysis of your target audience segments, their needs, and how your product addresses them.
-</details>
 
-<details>
-<summary><strong>Jobs To Be Done Framework</strong></summary>
+### Jobs To Be Done Framework
 
-### Jobs To Be Done Framework Prompt
+**Purpose:** To uncover the underlying 'jobs' customers are trying to get done, for which they might 'hire' your product.
 
-**Name**: JTBD Framework Facilitator
+**Goal:** Insight into customer motivations and desired outcomes, beyond surface-level features.
 
-**Purpose**: Helps you apply the Jobs to be Done framework to understand the functional, emotional, and social jobs your users are trying to accomplish.
+**When to Use:** To gain deeper empathy for customer needs and identify innovation opportunities.
 
-**When to Use**: When you want to deeply understand user motivations beyond surface-level feature requests.
+**Prompt Text:**
 
-**Prompt**:
-```
-Help me apply the Jobs to be Done (JTBD) framework to understand the core motivations driving my users. Guide me through identifying and classifying the functional, emotional, and social jobs my product helps users accomplish.
+```markdown
+Help me apply the Jobs to be Done (JTBD) framework to understand why customers would "hire" my product or service.
 
 First, ask me about:
-- My product's purpose and target audience
-- The context in which users would use my product
-- The alternatives or competitors in this space
-- Any insights I already have about user motivations
+- My product/service concept
+- My target customers
+- The context in which they'd use my solution
+- Alternatives they're currently using
 
-Then, help me identify and classify:
+Then, guide me through identifying:
 
-1. Functional Jobs:
-   - What practical tasks are users trying to accomplish?
+1. Functional Jobs
+   - What practical tasks are customers trying to accomplish?
    - What functional problems are they trying to solve?
-   - What utility are they seeking?
-   - How do they measure success for these tasks?
+   - What practical outcomes are they seeking?
 
-2. Emotional Jobs:
-   - How do users want to feel when using the product?
-   - What negative emotions are they trying to avoid?
-   - What positive emotions are they seeking?
-   - What gives them confidence or peace of mind?
+2. Emotional Jobs
+   - How do customers want to feel when using the solution?
+   - What emotional states are they trying to avoid?
+   - What would give them peace of mind or satisfaction?
 
-3. Social Jobs:
-   - How do users want to be perceived by others?
-   - What social connections or status are they seeking?
-   - What relationships are they trying to build or maintain?
-   - How does this product affect their social identity?
+3. Social Jobs
+   - How do customers want to be perceived by others?
+   - What social status or relationship outcomes do they want?
+   - How does the solution affect their social identity?
 
-For each job category, help me formulate clear JTBD statements in the format:
-"When [situation], I want to [motivation], so I can [expected outcome]."
+4. Job Statements
+   - Help me craft 3-5 complete JTBD statements in this format:
+   - "When [situation], I want to [motivation], so I can [expected outcome]"
 
-Then guide me to:
-- Prioritize these jobs based on importance to users
-- Identify which jobs are currently underserved in the market
-- Connect these jobs to potential product features and capabilities
-- Determine how to measure success in fulfilling these jobs
-
-Challenge me to think beyond features and focus on the progress users are trying to make in their lives.
+5. Prioritization
+   - Help me identify which jobs are:
+   - Most important to customers
+   - Most underserved by existing solutions
+   - Most aligned with my product's unique capabilities
 ```
 
-**Example Usage**: When you want to understand the deeper motivations behind user behavior to inform product decisions.
+---
 
-**Expected Output**: A comprehensive analysis of the functional, emotional, and social jobs your product helps users accomplish, formatted as clear JTBD statements.
-</details>
 
-<details>
-<summary><strong>User Story Mapping</strong></summary>
+### Lean Canvas Builder
 
-### User Story Mapping Prompt
+**Purpose:** To quickly outline and validate your business model using the Lean Canvas framework.
 
-**Name**: User Journey Mapper
+**Goal:** A completed Lean Canvas identifying key assumptions and areas for validation.
 
-**Purpose**: Helps you create a structured user story map that organizes user activities, tasks, and stories into a coherent narrative flow.
+**When to Use:** Early in the idea stage, before significant investment, to map out your business model.
 
-**When to Use**: When planning product features and creating a development backlog that maintains focus on the user journey.
+**Prompt Text:**
 
-**Prompt**:
-```
-Help me create a comprehensive user story map for my product. Guide me through the process of identifying user activities, breaking them down into tasks, and organizing them into a coherent journey.
+```markdown
+Help me create a comprehensive Lean Canvas for my startup idea. I need a structured way to document my business model assumptions and identify areas that need validation.
 
 First, ask me about:
-- The primary user personas for my product
-- The main goals these users are trying to achieve
-- The overall scope and boundaries of the product
+- My product/service concept
+- The problem I'm solving
+- My target customers
+- My unique value proposition
+- Any validation I've already done
 
-Then, help me build the story map by:
+Then, guide me through completing each section of the Lean Canvas:
 
-1. Identifying the major user activities (the backbone):
-   - What are the key phases of the user journey?
-   - What are the primary activities users perform to achieve their goals?
-   - How do these activities flow in sequence?
+1. Problem (Top 3 Problems)
+   - What are the top 3 problems my target customers face?
+   - What existing alternatives are they using?
 
-2. Breaking down each activity into specific tasks:
-   - What steps do users take to complete each activity?
-   - What are the essential vs. optional tasks?
-   - How do these tasks connect to create a complete workflow?
+2. Customer Segments
+   - Who are my target customers?
+   - Who are my early adopters?
+   - What are their characteristics?
 
-3. For each task, help me identify:
-   - What the user is trying to accomplish
-   - What information they need
-   - What decisions they need to make
-   - What output or result they expect
+3. Unique Value Proposition
+   - What is my single, clear, compelling message?
+   - Why is my solution different and worth buying?
 
-4. Organizing the map horizontally (narrative flow) and vertically (priority):
-   - Arrange activities in chronological order from left to right
-   - Prioritize tasks from top (must-have) to bottom (nice-to-have)
+4. Solution
+   - What are the top features or capabilities that solve each problem?
+   - How do they map to the problems identified?
 
-5. Identifying natural release slices across the story map:
-   - What's the minimum viable product that delivers end-to-end value?
-   - What are logical feature increments for subsequent releases?
-   - How can we ensure each release provides complete user value?
+5. Channels
+   - How will I reach my customers?
+   - Which channels will be most effective?
+   - How do these channels connect to my customers' routines?
 
-Throughout this process, challenge me to maintain focus on user goals rather than implementation details. The final output should be a structured story map that can guide product development priorities while maintaining focus on the complete user experience.
+6. Revenue Streams
+   - What is my revenue model?
+   - What is my pricing strategy?
+   - What is the lifetime value of a customer?
+   - What is my gross margin?
+
+7. Cost Structure
+   - What are my fixed costs?
+   - What are my variable costs?
+   - What is my cost of customer acquisition?
+
+8. Key Metrics
+   - What key activities will I measure?
+   - What are the key indicators of success?
+   - What are my targets for these metrics?
+
+9. Unfair Advantage
+   - What can't be easily copied or bought?
+   - What makes my solution defensible?
+
+For each section, help me identify:
+- The most critical assumptions that need validation
+- How I might test these assumptions quickly and cheaply
+- What would constitute validation of these assumptions
+
+Please format the canvas clearly and provide a summary of the most critical aspects of my business model and the key assumptions I should focus on validating first.
 ```
 
-**Example Usage**: When planning product features and creating a development roadmap that maintains focus on the user journey.
+---
 
-**Expected Output**: A structured user story map that organizes user activities, tasks, and stories into a coherent narrative flow, with clear prioritization and release planning.
-</details>
 
-<details>
-<summary><strong>User Story Creation</strong></summary>
+### Value Proposition Canvas Generator
 
-### User Story Creation Prompt
+**Purpose:** To articulate how your product creates value for customers by addressing their pains and gains related to their jobs-to-be-done.
 
-**Name**: User Story Craftsman
+**Goal:** A clear and compelling value proposition that resonates with your target audience.
 
-**Purpose**: Helps you create well-formed user stories at various levels of granularity, from epics to detailed implementation stories.
+**When to Use:** To ensure product-market fit and to craft effective marketing messages.
 
-**When to Use**: When translating user needs into actionable development items for your backlog.
+**Prompt Text:**
 
-**Prompt**:
-```
-Help me craft clear, effective user stories for my product backlog. Guide me through creating a hierarchy of stories from epics down to implementation-ready stories.
+```markdown
+Help me create a comprehensive value proposition canvas for [product/service name]. I need to clearly articulate how my solution addresses specific customer needs and delivers unique benefits.
 
 First, ask me about:
-- The specific feature or capability we're focusing on
-- The user personas involved
-- The user goals and jobs to be done
-- Any constraints or requirements to consider
+- My target customer segment
+- The key jobs/tasks my customers are trying to accomplish
+- The pains they experience in trying to accomplish these jobs
+- The gains they hope to achieve
 
-Then, help me create:
+Then, help me develop:
 
-1. Epic-level stories:
-   - Broad user capabilities that might span multiple features
-   - Format: "As a [persona], I want [capability], so that [benefit]"
-   - Include success criteria and business value
+1. A detailed value proposition canvas with:
+   - Customer Profile (jobs, pains, gains)
+   - Value Map (products/services, pain relievers, gain creators)
+   - How my offering specifically connects to each element
 
-2. Feature-level stories:
-   - More specific capabilities that deliver distinct user value
-   - Format: "As a [persona], I want [feature], so that [benefit]"
-   - Include acceptance criteria and dependencies
+2. A concise value proposition statement that follows this format:
+   - For [target customer]
+   - Who [statement of need or opportunity]
+   - Our [product/service name] is [product category]
+   - That [key benefit, compelling reason to buy]
+   - Unlike [primary competitive alternative]
+   - Our product [statement of primary differentiation]
 
-3. Implementation-ready stories:
-   - Granular stories that can be completed in a single sprint
-   - Format: "As a [persona], I want [specific functionality], so that [specific benefit]"
-   - Include detailed acceptance criteria using Given/When/Then format
-   - Add technical notes, UI/UX considerations, and testing requirements
+3. Three alternative versions of my value proposition optimized for:
+   - Website headline
+   - Elevator pitch (30 seconds)
+   - Sales presentation
 
-For each story level, help me:
-- Ensure it's valuable (delivers user or business benefit)
-- Make it independent (can be developed separately from other stories)
-- Keep it negotiable (leaves room for discussion)
-- Make it estimable (has enough detail to size)
-- Keep it small (appropriate for its level in the hierarchy)
-- Make it testable (has clear acceptance criteria)
+4. Suggestions for testing and validating this value proposition with real customers
 
-Also guide me in:
-- Breaking down larger stories into smaller ones when needed
-- Identifying non-functional requirements as separate stories
-- Creating technical stories that support user-facing functionality
-- Prioritizing stories based on value and dependencies
-
-The output should be a well-structured set of user stories that clearly communicate user needs at different levels of detail.
+Please ensure the value proposition is specific, addresses real customer needs, communicates concrete benefits (not just features), and differentiates from alternatives in the market.
 ```
 
-**Example Usage**: When creating a product backlog or planning a specific feature implementation.
+---
 
-**Expected Output**: A hierarchical set of well-formed user stories from epics to implementation-ready stories, with clear acceptance criteria and prioritization.
-</details>
 
-<details>
-<summary><strong>Phased Roadmap Development</strong></summary>
+## Plan Prompts
 
-### Phased Roadmap Development Prompt
+### User Story Map
 
-**Name**: Lean Roadmap Strategist
+**Purpose:** Helps you visualize the user journey and organize features into a coherent narrative.
 
-**Purpose**: Helps you establish a clear, phased product roadmap with defined milestones, success metrics, and prioritized deliverables following lean methodology.
+**Goal:** Create a structured map of user activities, tasks, and stories to guide development.
 
-**When to Use**: When planning the strategic evolution of your product over time and need to balance vision with practical execution.
+**When to Use:** When planning your product backlog and organizing development priorities.
 
-**Prompt**:
+**Prompt Text:**
+
+```markdown
+Help me create a comprehensive user story map for [product/feature]. I need to visualize the user journey and organize our backlog into a coherent narrative structure.
+
+First, ask me about:
+- The primary user personas we're targeting
+- The main goals these users want to accomplish
+- The overall scope of the product or feature
+- Any existing user research or journey maps we have
+- Our development timeline and constraints
+
+Then, guide me through building a user story map with:
+
+1. Backbone (User Activities)
+   - The high-level activities users perform to accomplish their goals
+   - The natural sequence of these activities from start to finish
+   - How different user personas might have different activity flows
+
+2. Walking Skeleton (User Tasks)
+   - The specific tasks users perform within each activity
+   - How these tasks connect to form complete workflows
+   - Alternative paths or edge cases in the user journey
+
+3. User Stories
+   - Detailed user stories for each task following the format:
+     "As a [user type], I want to [action], so that [benefit]"
+   - Acceptance criteria for each story
+   - Relative complexity or effort estimates
+
+4. Releases or Slices
+   - How to organize stories into meaningful releases
+   - What constitutes our Minimum Viable Product (MVP)
+   - Subsequent releases that build upon the MVP
+   - How to ensure each release delivers end-to-end user value
+
+5. Prioritization
+   - Which stories are must-haves vs. nice-to-haves
+   - How to balance user value, business value, and risk
+   - Dependencies between stories that affect sequencing
+
+6. Gaps and Risks
+   - Potential gaps in the user journey
+   - Technical or design challenges we should anticipate
+   - Research questions that need answering
+
+Please provide a structured, visual representation of the story map that I can share with my team, along with guidance on how to use this map for sprint planning and backlog refinement.
 ```
-Help me establish a clear, phased roadmap for my product following lean methodology principles. Guide me through defining milestone outcomes, success metrics, and prioritized deliverables that focus on learning and validation.
+
+---
+
+
+### PRD Generator
+
+**Purpose:** Helps you create a comprehensive Product Requirements Document.
+
+**Goal:** Document clear requirements and specifications for your product or feature.
+
+**When to Use:** When you need to define detailed requirements for development.
+
+**Prompt Text:**
+
+```markdown
+Help me create a comprehensive Product Requirements Document (PRD) for [product/feature name]. I need to clearly define what we're building, why we're building it, and how it should work.
+
+First, ask me about:
+- The problem this product/feature solves
+- Our target users and their needs
+- Business objectives and success metrics
+- Timeline and resource constraints
+- Any existing research, designs, or technical considerations
+
+Then, help me create a structured PRD with these sections:
+
+1. Executive Summary
+   - Brief overview of the product/feature
+   - The core problem being solved
+   - Key benefits and expected outcomes
+   - Strategic alignment with company goals
+
+2. Problem Statement & User Needs
+   - Detailed description of the problem
+   - User personas and their specific needs
+   - Current pain points and limitations
+   - How this solution addresses these needs
+
+3. Market & Competitive Analysis
+   - Target market size and segments
+   - Competitive landscape
+   - Differentiation strategy
+   - Market trends and opportunities
+
+4. Product Goals & Success Metrics
+   - Primary and secondary objectives
+   - Key performance indicators (KPIs)
+   - How success will be measured
+   - Baseline metrics and targets
+
+5. User Stories & Requirements
+   - Comprehensive list of user stories
+   - Functional requirements
+   - Non-functional requirements (performance, security, etc.)
+   - Technical requirements and dependencies
+
+6. User Experience & Design
+   - User flows and journeys
+   - Key screens or interactions
+   - Design principles and guidelines
+   - Accessibility considerations
+
+7. Technical Considerations
+   - Architecture overview
+   - System dependencies
+   - API requirements
+   - Data requirements and models
+   - Security and compliance needs
+
+8. Rollout Strategy
+   - Phasing and prioritization
+   - Beta testing approach
+   - Launch plan
+   - Monitoring and feedback collection
+
+9. Risks & Mitigations
+   - Potential risks and challenges
+   - Mitigation strategies
+   - Open questions and assumptions
+
+10. Timeline & Milestones
+    - Development phases
+    - Key milestones and deliverables
+    - Dependencies and critical path
+
+For each section, provide clear, specific content that avoids ambiguity and gives the development team everything they need to build the right solution.
+```
+
+---
+
+
+### MUST-SHOULD-COULD Prioritiser
+
+**Purpose:** Helps you prioritize features using the MoSCoW method (Must, Should, Could, Won't).
+
+**Goal:** Create a clear prioritization framework for your product backlog.
+
+**When to Use:** When you need to decide what to build first and what can wait.
+
+**Prompt Text:**
+
+```markdown
+Help me prioritize my product backlog using the MoSCoW method (Must have, Should have, Could have, Won't have). I need to make clear decisions about what features to include in our initial release and subsequent iterations.
 
 First, ask me about:
 - My product vision and core value proposition
-- The current state of my product (concept, MVP, established)
-- Key hypotheses I need to validate
-- Available resources and constraints
-- Target timeline horizon (3 months, 6 months, 1 year+)
-- Key business objectives and success criteria
+- The primary user problems we're solving
+- Our development timeline and constraints
+- Any non-negotiable requirements (legal, security, etc.)
+- The feature ideas currently in our backlog
 
-Then, help me develop a lean roadmap by:
+Then, guide me through:
 
-1. Defining clear milestone outcomes:
-   - What specific hypotheses will each milestone validate?
-   - What user/business value will each milestone deliver?
-   - How does each milestone build toward the larger vision?
-   - What learning objectives are associated with each milestone?
+1. Establishing Prioritization Criteria
+   - Business value (revenue, retention, acquisition)
+   - User value (pain point severity, frequency of use)
+   - Implementation complexity and effort
+   - Dependencies and technical constraints
+   - Strategic alignment with company goals
 
-2. Establishing success metrics for each milestone:
-   - What quantitative metrics will indicate success?
-   - What qualitative feedback will we seek?
-   - What minimum thresholds must be met to proceed?
-   - How will we collect and measure these metrics?
+2. MoSCoW Categorization
+   - MUST have: Critical features without which the product will fail
+   - SHOULD have: Important features that add significant value but aren't critical
+   - COULD have: Desirable features that would enhance the product but can be delayed
+   - WON'T have: Features explicitly excluded from the current scope
 
-3. Prioritizing deliverables for each milestone:
-   - What is the minimum scope needed to validate our hypotheses?
-   - How can we batch user stories and technical tasks into coherent releases?
-   - What dependencies exist between deliverables?
-   - How should we balance new features vs. improvements to existing ones?
+3. For each feature in my backlog, help me:
+   - Evaluate it against our prioritization criteria
+   - Assign it to the appropriate MoSCoW category
+   - Document the rationale for this categorization
+   - Identify any dependencies or prerequisites
 
-4. Incorporating supporting activities:
-   - What marketing activities are needed to support each milestone?
-   - What sales, customer success, or operational preparations are required?
-   - What technical infrastructure or foundation work is necessary?
-   - What user research should be conducted before/during/after each milestone?
+4. Scope Definition
+   - Define our Minimum Viable Product (MVP) based on the MUST haves
+   - Create a roadmap for incorporating SHOULD and COULD haves in future iterations
+   - Establish clear boundaries for what's in and out of scope
 
-5. Building in feedback loops and pivot points:
-   - When and how will we evaluate progress against our metrics?
-   - What criteria would trigger a pivot or change in direction?
-   - How will we incorporate learning into subsequent milestones?
+5. Trade-off Analysis
+   - Identify potential conflicts or resource constraints
+   - Suggest approaches for resolving prioritization conflicts
+   - Highlight risks associated with delaying certain features
 
-Throughout this process, challenge me to:
-- Focus on outcomes rather than outputs
-- Minimize scope to what's truly necessary for learning
-- Consider both discovery (learning) and delivery (building) activities
-- Balance short-term wins with long-term strategic objectives
+6. Communication Strategy
+   - How to explain our prioritization decisions to stakeholders
+   - How to manage expectations about features in each category
+   - How to revisit and adjust priorities as we learn more
 
-The final output should be a flexible roadmap organized into clear phases, with defined outcomes, metrics, and prioritized deliverables for each phase.
+Please be specific and challenge any assumptions that might lead to scope creep or misaligned priorities. Help me make tough decisions rather than trying to include everything.
 ```
 
-**Example Usage**: When planning the strategic evolution of your product over time and need to balance vision with practical execution.
+---
 
-**Expected Output**: A comprehensive, phased roadmap with clear milestones, success metrics, and prioritized deliverables that follows lean methodology principles.
-</details>
 
-<details>
-<summary><strong>Information Architecture</strong></summary>
+### Tech Stack Advisor
 
-### Information Architecture Prompt
+**Purpose:** Helps you select the most appropriate technology stack for your product.
 
-**Name**: Information Architecture Designer
+**Goal:** Make informed decisions about technologies that align with your requirements and constraints.
 
-**Purpose**: Helps you establish a clear, intuitive information architecture for your website, application, or product that organizes content in a user-friendly way.
+**When to Use:** Before beginning development when evaluating technical options.
 
-**When to Use**: When planning the structure and organization of content and functionality for a new product or redesigning an existing one.
+**Prompt Text:**
 
-**Prompt**:
-```
-Help me establish a comprehensive information architecture for my [website/application/product]. Guide me through creating an intuitive structure that organizes content and functionality in a way that makes sense to users.
+```markdown
+Help me select the most appropriate technology stack for my [product type] project. I need to make informed decisions about which technologies to use based on my specific requirements and constraints.
 
 First, ask me about:
-- The purpose and goals of my [website/application/product]
-- My target audience and their primary tasks
-- The types of content and functionality I need to include
-- Any existing content structure (if redesigning)
-- Key user flows and journeys
-- Any specific organizational challenges I'm facing
+- The type of product I'm building (web app, mobile app, etc.)
+- My target users and their technical environment
+- Key functional requirements and features
+- Non-functional requirements (performance, scalability, security)
+- My team's current technical expertise
+- Timeline and budget constraints
+- Long-term maintenance and scalability needs
 
-Then, help me develop:
+Then, help me evaluate options for:
 
-1. Content inventory and audit (if applicable):
-   - Categories of content to include
-   - Content prioritization framework
-   - Content relationships and dependencies
-   - Content that can be archived or removed
+1. Frontend Technologies
+   - Framework options (React, Vue, Angular, etc.)
+   - Mobile approach (native, hybrid, PWA)
+   - UI libraries and design systems
+   - State management solutions
+   - Performance considerations
 
-2. Site/application structure:
-   - Primary navigation categories
-   - Secondary navigation organization
-   - Hierarchical relationships between sections
-   - Naming conventions for sections and pages
+2. Backend Technologies
+   - Language options (Node.js, Python, Ruby, etc.)
+   - Framework options within chosen language
+   - API architecture (REST, GraphQL, etc.)
+   - Authentication and authorization approaches
+   - Background processing needs
 
-3. User flow mapping:
-   - Key task flows through the architecture
-   - Entry points and exit points
-   - Decision points and alternative paths
-   - Potential friction points and solutions
+3. Database Solutions
+   - Relational vs. NoSQL options
+   - Specific database technologies
+   - Data modeling considerations
+   - Scaling strategy
+   - Backup and recovery approach
 
-4. Information organization principles:
-   - Taxonomies and categorization systems
-   - Tagging and metadata strategy
-   - Search functionality requirements
-   - Filter and sort capabilities
+4. Infrastructure & DevOps
+   - Hosting options (cloud providers, self-hosted)
+   - Containerization and orchestration
+   - CI/CD pipeline options
+   - Monitoring and logging solutions
+   - Security considerations
 
-5. Visualization of the architecture:
-   - Site map representation
-   - Content model diagrams
-   - User flow diagrams
-   - Navigation models
+5. Third-party Services & APIs
+   - Build vs. buy decisions
+   - Integration requirements
+   - Vendor evaluation criteria
+   - Cost implications
 
-Throughout this process, challenge me to:
-- Focus on user needs rather than internal organization
-- Use clear, user-centered language
-- Create intuitive paths to high-value content
-- Balance comprehensiveness with simplicity
-- Consider future growth and content expansion
+For each category, provide:
+- 2-3 recommended options with pros and cons
+- Specific factors that make each option suitable for my case
+- Potential risks and mitigations
+- Cost and learning curve considerations
+- Future-proofing and scalability implications
 
-The output should be a comprehensive information architecture plan that can guide design and development while ensuring users can easily find what they need.
+Conclude with a recommended stack that balances my requirements, constraints, and long-term considerations, with clear rationale for each technology choice.
 ```
 
-**Example Usage**: When planning how to organize content and functionality for a new website or application.
+---
 
-**Expected Output**: A detailed information architecture plan with site maps, content organization principles, and user flow diagrams.
-</details>
 
-<details>
-<summary><strong>Lean Canvas Development</strong></summary>
+### Roadmap Milestone Planner
 
-### Lean Canvas Development Prompt
+**Purpose:** Helps you create a phased product roadmap with clear milestones and deliverables.
 
-**Name**: Lean Canvas Coach
+**Goal:** Develop a strategic roadmap that balances vision with realistic execution.
 
-**Purpose**: Helps founders and product teams rapidly develop a comprehensive Lean Canvas that captures the essence of their business model in a structured format.
+**When to Use:** When planning your product development timeline and communicating it to stakeholders.
 
-**When to Use**: When starting a new venture or pivoting an existing one and need to clarify your business model fundamentals.
+**Prompt Text:**
 
-**Prompt**:
-```
-Act as an experienced business coach helping me develop a comprehensive Lean Canvas for my startup or product idea. Guide me through each section with targeted questions and provide constructive feedback to strengthen my business model.
-
-First, ask me for a brief overview of my business concept to establish context.
-
-Then, systematically walk me through each section of the Lean Canvas in this order:
-
-1. Problem:
-   - What are the top 1-3 problems your target customers face?
-   - What existing alternatives do they use to solve these problems?
-   - Why are current solutions inadequate?
-
-2. Customer Segments:
-   - Who are your target customers or users?
-   - Who are your early adopters?
-   - What characteristics define these segments?
-
-3. Unique Value Proposition:
-   - What is your single, clear, compelling message that states why you're different and worth paying attention to?
-   - How does this connect to your customers' problems?
-   - What makes your approach different from alternatives?
-
-4. Solution:
-   - What are the top features or capabilities that address each problem?
-   - How do these solutions map to the problems identified?
-   - What is the minimum viable solution?
-
-5. Channels:
-   - How will you reach your customers?
-   - Which channels will be most effective for acquisition and retention?
-   - How do these channels align with customer behaviors?
-
-6. Revenue Streams:
-   - How will you make money?
-   - What is your pricing model?
-   - What is the lifetime value of a customer?
-   - What are your margins?
-
-7. Cost Structure:
-   - What are your fixed and variable costs?
-   - What are the key resources you need to pay for?
-   - What are your cost drivers?
-
-8. Key Metrics:
-   - What key activities will you measure?
-   - What are the key indicators of success?
-   - Which metrics will help you make decisions?
-
-9. Unfair Advantage:
-   - What can't be easily copied or bought?
-   - What makes your business defensible?
-   - What unique advantages do you have?
-
-For each section:
-- Challenge my assumptions and help me refine my thinking
-- Provide examples relevant to my industry or business model
-- Suggest ways to validate the most critical assumptions
-- Highlight potential inconsistencies between sections
-
-After completing all sections, help me identify:
-- The riskiest assumptions that need validation first
-- Potential experiments to test these assumptions
-- How the different elements of the canvas connect and support each other
-
-The output should be a comprehensive Lean Canvas that captures my business model in a clear, concise format, along with next steps for validation and refinement.
-```
-
-**Example Usage**: When starting a new venture or pivoting an existing one and need to clarify your business model fundamentals.
-
-**Expected Output**: A complete Lean Canvas with well-articulated sections, identified assumptions, and validation strategies.
-</details>
-
-<details>
-<summary><strong>PR-FAQ Creation</strong></summary>
-
-### PR-FAQ Creation Prompt
-
-**Name**: PR-FAQ Architect
-
-**Purpose**: Helps you create a compelling Press Release and FAQ document that clearly articulates your product vision, value proposition, and addresses potential questions from both internal and external stakeholders.
-
-**When to Use**: When defining a new product or major feature to align stakeholders around a shared vision of the end result before development begins.
-
-**Prompt**:
-```
-Help me create a comprehensive PR-FAQ document for my product or feature following Amazon's "working backwards" methodology. Guide me through crafting both a compelling press release that communicates the customer value and a detailed FAQ that addresses stakeholder questions.
+```markdown
+Help me create a strategic product roadmap with clear milestones for [product name]. I need to plan our development phases and communicate our direction to stakeholders.
 
 First, ask me about:
-- The product or feature I'm developing
-- The target customers and their pain points
-- The key benefits and value proposition
-- The timeline for launch
-- Any specific concerns or challenges
+- Our product vision and key objectives
+- Our prioritized feature list (MoSCoW or similar)
+- Available resources and team capacity
+- Key deadlines or market timing considerations
+- Known dependencies or constraints
+- Stakeholder expectations
 
-Then, help me craft:
+Then, guide me through creating a roadmap with:
 
-1. Press Release section including:
-   - Attention-grabbing headline that focuses on customer benefit
-   - Subheading that expands on the headline with additional context
-   - Opening paragraph explaining the product, target customer, and market
-   - Problem statement paragraph describing the customer pain point
-   - Solution paragraph explaining how the product solves this problem
-   - Quote from company leadership focusing on vision and strategy
-   - Quote from a hypothetical customer describing their experience
-   - Call to action and availability information
-   - Boilerplate company description
+1. Roadmap Horizons
+   - Near-term (next 1-3 months) with specific deliverables
+   - Mid-term (3-6 months) with planned feature sets
+   - Long-term (6+ months) with strategic directions
+   - How to balance specificity vs. flexibility at each horizon
 
-2. FAQ section addressing:
-   - Internal questions:
-     * Why are we building this?
-     * How does this align with our strategy?
-     * What were the alternatives we considered?
-     * What are the technical challenges?
-     * What are the success metrics?
-     * What is the rollout strategy?
-     * What resources are required?
+2. Milestone Definition
+   - 3-5 key milestones that represent significant product evolution
+   - Clear success criteria for each milestone
+   - Logical progression that builds toward our vision
+   - Realistic timeframes based on our capacity
 
-   - External questions:
-     * How is this different from competitors?
-     * What does it cost?
-     * How do I get started?
-     * What platforms/devices are supported?
-     * How does it integrate with existing solutions?
-     * What about security/privacy?
-     * What support is available?
+3. For each milestone:
+   - Theme or focus area
+   - Core user stories and features included
+   - Expected user and business outcomes
+   - Technical foundation being established
+   - Key metrics and KPIs to track
+   - Dependencies and prerequisites
 
-Throughout this process, challenge me to:
-- Focus relentlessly on customer value
-- Be specific and avoid vague marketing language
-- Address difficult questions honestly
-- Maintain a consistent voice and narrative
-- Think through implications and edge cases
+4. Release Planning
+   - How milestones map to specific releases
+   - Cadence of releases (continuous, scheduled, etc.)
+   - Beta or staged rollout considerations
+   - Feature flagging strategy
 
-The output should be a polished PR-FAQ document that could theoretically be published (for the PR) and that thoroughly addresses stakeholder concerns (for the FAQ).
+5. Resource Allocation
+   - Team capacity requirements for each phase
+   - Skills or specialists needed at different points
+   - Potential bottlenecks or constraints
+   - External dependencies or partnerships
+
+6. Risk Management
+   - Potential delays or challenges
+   - Contingency plans and buffer strategies
+   - Decision points for re-evaluation
+   - How to handle scope changes
+
+7. Communication Format
+   - Visual representation of the roadmap
+   - How to present to different stakeholder groups
+   - Level of detail appropriate for each audience
+   - How to set expectations about certainty vs. flexibility
+
+Please help me create a roadmap that is both aspirational and realistic, with enough detail to guide execution while maintaining flexibility to adapt to new information.
 ```
 
-**Example Usage**: When defining a new product or major feature to align stakeholders around a shared vision before development begins.
+---
 
-**Expected Output**: A complete PR-FAQ document with a compelling press release and comprehensive FAQ sections for both internal and external stakeholders.
-</details>
 
-<details>
-<summary><strong>Design System Establishment</strong></summary>
+### Product Vision & Strategy Outline
 
-### Design System Establishment Prompt
+**Purpose:** To define the long-term vision for your product and the high-level strategy to achieve it.
 
-**Name**: Design System Architect
+**Goal:** A clear product vision statement and a strategic roadmap with key objectives.
 
-**Purpose**: Helps you establish a comprehensive design system for your product that ensures visual consistency, improves development efficiency, and enhances user experience.
+**When to Use:** After initial validation, to set direction and guide product development efforts.
 
-**When to Use**: When starting a new product or standardizing the design of an existing one to ensure consistency across all interfaces.
+**Prompt Text:**
 
-**Prompt**:
-```
-Help me establish a comprehensive design system for my product. Guide me through creating a living design framework that ensures consistency, improves development efficiency, and enhances user experience.
+```markdown
+Help me develop a comprehensive product vision and strategy for [product name]. I need to articulate where we're going and how we'll get there to align my team and stakeholders.
 
 First, ask me about:
-- My product type and target platforms
-- Brand personality and values
-- Design inspirations and references I admire
-- Existing design elements (if any)
-- Team structure and workflow
-- Technical constraints or preferences
-- Specific areas where consistency is lacking
+- The core problem we're solving and for whom
+- Our validated customer insights and pain points
+- The market landscape and competitive environment
+- Our unique capabilities or advantages
+- Any constraints or limitations we face
 
-Then, help me develop:
+Then, guide me through creating:
 
-1. Design principles and philosophy:
-   - Core principles that guide design decisions
-   - Brand personality traits and how they translate to UI
-   - Design values and priorities
+1. Vision Statement
+   - A concise, inspiring description of the future we want to create
+   - The long-term impact we aim to have for our users and the market
+   - How the world will be different when we succeed
 
-2. Core visual elements:
-   - Color palette (primary, secondary, accent, semantic colors)
-   - Typography system (fonts, sizes, weights, line heights)
-   - Spacing and layout system (grid, margins, padding)
+2. Mission Statement
+   - What we do, for whom, and the primary value we deliver
+   - How we're different from alternatives
+   - Our core principles and approach
+
+3. Strategic Pillars (3-5)
+   - The key focus areas that will drive our success
+   - How each pillar supports our vision and mission
+   - Why these pillars matter more than other potential focuses
+
+4. Success Metrics
+   - How we'll measure progress toward our vision
+   - Key performance indicators for each strategic pillar
+   - Leading and lagging indicators of success
+
+5. Strategic Roadmap
+   - Major phases or milestones over the next 12-18 months
+   - Key capabilities we need to build in each phase
+   - How these phases build toward our vision
+
+6. Guiding Principles
+   - Decision-making frameworks for the team
+   - Trade-offs we're willing (and not willing) to make
+   - How we'll prioritize competing opportunities
+
+7. Narrative
+   - A compelling story that ties everything together
+   - How to communicate this strategy to different stakeholders
+   - Addressing potential objections or concerns
+
+For each component, provide examples and templates, then help me craft my own version that's specific, meaningful, and actionable for my product context.
+```
+
+---
+
+
+## Build Prompts
+
+### Design System Starter
+
+**Purpose:** Helps you establish a cohesive design system for your product.
+
+**Goal:** Create a consistent visual language and component library for your product.
+
+**When to Use:** When starting the design phase of your product development.
+
+**Prompt Text:**
+
+```markdown
+Help me establish a comprehensive design system for my [product type]. I need to create a cohesive visual language and component library that ensures consistency across our product.
+
+First, ask me about:
+- The type of product I'm building
+- Our brand personality and values
+- Our target audience and their preferences
+- Any existing brand assets or guidelines
+- Technical constraints or platform requirements
+- Accessibility needs and compliance requirements
+
+Then, guide me through creating a design system with:
+
+1. Brand Foundations
+   - Color palette (primary, secondary, accent, neutral)
+   - Typography system (headings, body text, special text)
+   - Spacing and layout grid
    - Iconography style and guidelines
-   - Imagery and illustration guidelines
+   - Imagery and illustration principles
 
-3. Component library structure:
-   - Atomic design organization (atoms, molecules, organisms)
-   - Component naming conventions
+2. Core Components
+   - Essential UI components (buttons, inputs, cards, etc.)
    - Component variants and states
    - Responsive behavior guidelines
-   - Accessibility considerations for each component
+   - Interactive patterns and animations
+   - Loading states and error handling
 
-4. Pattern library:
-   - Common UI patterns and when to use them
-   - Navigation patterns
-   - Form patterns
-   - Data visualization patterns
-   - Loading and error states
+3. Design Principles
+   - Key principles that guide design decisions
+   - How these principles reflect our brand and values
+   - How to apply these principles in practice
+   - Examples of good and bad applications
 
-5. Implementation guidelines:
-   - Technical approach (CSS framework, component library)
-   - Documentation standards
-   - Version control and change management
-   - Integration with development workflow
-   - Measuring adoption and compliance
+4. Usage Guidelines
+   - When and how to use each component
+   - Component combinations and layouts
+   - Content guidelines and voice/tone
+   - Accessibility best practices
+   - Performance considerations
 
-Throughout this process, encourage me to:
-- Share specific examples of designs I admire
-- Consider how the system will evolve over time
-- Balance consistency with flexibility
-- Consider both designer and developer experience
-- Prioritize accessibility from the beginning
+5. Implementation Strategy
+   - How to document the design system
+   - Tools and platforms for maintaining the system
+   - Versioning and update process
+   - How developers and designers should collaborate
 
-The output should be a structured plan for my design system, including specific recommendations for tools, processes, and governance to ensure its successful implementation and adoption.
+6. Governance Model
+   - Who owns and maintains the design system
+   - Process for proposing and approving changes
+   - How to handle exceptions and custom needs
+   - Measuring adoption and effectiveness
+
+For each section, provide specific recommendations tailored to my product context, not generic advice. Include examples and rationale for key decisions to help my team understand the system's purpose and value.
 ```
-
-**Example Usage**: When establishing visual and interaction standards for a new product or standardizing an existing one.
-
-**Expected Output**: A comprehensive design system plan with visual elements, component specifications, and implementation guidelines tailored to your product needs.
-</details>
 
 ---
 
-## Technical Setup
 
-<details>
-<summary><strong>GitHub Repository Configuration</strong></summary>
+### Repo & CI/CD Quick-Start
 
-### GitHub Repository Configuration Prompt
+**Purpose:** Helps you set up a repository structure and CI/CD pipeline for your project.
 
-**Name**: GitHub Setup Specialist
+**Goal:** Establish a solid foundation for collaborative development and automated deployment.
 
-**Purpose**: Helps you properly configure a GitHub repository with best practices for collaboration, automation, and project management.
+**When to Use:** When starting development and setting up your technical infrastructure.
 
-**When to Use**: When setting up a new project repository or improving the configuration of an existing one.
+**Prompt Text:**
 
-**Prompt**:
-```
-Help me configure a GitHub repository following best practices for my project. Guide me through setting up not just the basic repository, but all the supporting elements that make for an efficient development workflow.
+```markdown
+Help me set up a repository structure and CI/CD pipeline for my [project type] project. I need to establish a solid foundation for collaborative development and automated deployment.
 
 First, ask me about:
-- The nature of my project (language, framework, team size)
-- My development workflow preferences
-- CI/CD requirements
-- Collaboration and review processes
-- Any specific GitHub features I'm interested in
+- The type of project (web app, mobile app, API, etc.)
+- The programming languages and frameworks we're using
+- Our team size and development workflow
+- Our hosting environment or deployment targets
+- Any specific security or compliance requirements
+- Our testing strategy and quality standards
 
-Then, help me configure:
+Then, guide me through setting up:
 
-1. Repository basics:
-   - README.md structure and content
-   - License selection and file
-   - .gitignore appropriate for my tech stack
-   - CONTRIBUTING.md guidelines
-   - Issue and PR templates
+1. Repository Structure
+   - Recommended folder organization
+   - Essential files (.gitignore, README, etc.)
+   - Configuration management approach
+   - Dependency management
+   - Environment variable handling
+   - Documentation structure
 
-2. Branch protection rules:
-   - Main/master branch protection
-   - Required reviews and approvals
-   - Status check requirements
-   - Merge strategy recommendations
+2. Branch Strategy
+   - Recommended branching model (GitFlow, trunk-based, etc.)
+   - Branch naming conventions
+   - Protection rules for critical branches
+   - Pull request and code review process
+   - Merge strategy and conflict resolution
 
-3. GitHub Actions workflows:
-   - CI pipeline for testing and validation
-   - Automated dependency updates
-   - Deployment workflows if applicable
-   - Code quality checks
+3. CI Pipeline Configuration
+   - Recommended CI platform (GitHub Actions, CircleCI, etc.)
+   - Pipeline stages and workflows
+   - Build process configuration
+   - Automated testing setup
+   - Code quality checks (linting, static analysis)
+   - Security scanning integration
 
-4. Project management:
-   - Issue labels and categorization
-   - Project board setup
-   - Milestone configuration
-   - Release management process
-
-5. Repository settings:
-   - Security settings and vulnerability alerts
-   - Access control and team permissions
-   - Webhook configurations if needed
-   - GitHub Pages if applicable
-
-For each configuration area, provide specific code snippets, file contents, or step-by-step instructions. Explain the rationale behind each recommendation so I understand the benefits.
-
-The output should be a comprehensive GitHub repository setup plan that I can implement immediately.
-```
-
-**Example Usage**: When setting up a new project repository or improving the configuration of an existing one.
-
-**Expected Output**: A detailed plan for configuring your GitHub repository with specific file contents, workflow configurations, and settings recommendations.
-</details>
-
-<details>
-<summary><strong>Hosting & Deployment Setup</strong></summary>
-
-### Hosting & Deployment Setup Prompt
-
-**Name**: Deployment Infrastructure Architect
-
-**Purpose**: Helps you select and configure the appropriate hosting solution (like Netlify) for your project, including CI/CD pipelines and environment management.
-
-**When to Use**: When setting up hosting infrastructure for a new project or improving an existing deployment process.
-
-**Prompt**:
-```
-Help me set up a robust hosting and deployment infrastructure for my project. Guide me through selecting the appropriate hosting platform and configuring CI/CD pipelines, environments, and deployment workflows.
-
-First, ask me about:
-- My project type (static site, SPA, full-stack application, etc.)
-- Expected traffic and scaling needs
-- Budget constraints
-- Performance requirements
-- Security considerations
-- Development workflow preferences
-- Any specific hosting platforms I'm considering (Netlify, Vercel, AWS, etc.)
-
-Then, help me:
-
-1. Select the optimal hosting platform:
-   - Compare options based on my specific requirements
-   - Explain pros/cons of each relevant option
-   - Recommend the best fit with justification
-
-2. Configure the selected platform:
-   - Account setup and team access
-   - Domain configuration and SSL
-   - Environment variables management
-   - Build settings and commands
-   - Performance optimizations
-
-3. Set up CI/CD pipelines:
-   - Automated build and testing
-   - Preview deployments for pull requests
-   - Production deployment workflow
-   - Rollback procedures
-
-4. Establish environment management:
-   - Development, staging, and production environments
+4. CD Pipeline Configuration
+   - Deployment environments (dev, staging, production)
+   - Deployment strategy (blue-green, canary, etc.)
    - Environment-specific configurations
-   - Promotion process between environments
-   - Database and backend service connections
+   - Rollback mechanisms
+   - Post-deployment verification
 
-5. Implement monitoring and maintenance:
-   - Uptime and performance monitoring
-   - Error tracking and alerting
-   - Analytics integration
-   - Regular maintenance procedures
+5. Infrastructure as Code
+   - Approach for managing infrastructure
+   - Configuration files and templates
+   - Environment consistency
+   - Secret management
 
-For each step, provide specific commands, configuration files, or step-by-step instructions that I can follow. Include screenshots or diagrams where helpful.
+6. Monitoring and Logging
+   - Essential metrics to track
+   - Log aggregation approach
+   - Alert configuration
+   - Performance monitoring
 
-The final output should be a comprehensive deployment setup plan tailored to my specific project needs.
+For each section, provide specific configuration examples and code snippets that I can adapt for my project, along with explanations of why these practices are recommended for my specific context.
 ```
-
-**Example Usage**: When setting up hosting infrastructure for a new project or improving an existing deployment process.
-
-**Expected Output**: A detailed plan for selecting and configuring your hosting platform, including specific configuration files, CI/CD workflows, and environment management strategies.
-</details>
 
 ---
 
-## Development Workflow
 
-<details>
-<summary><strong>Architecture Planning</strong></summary>
+### Architecture Outline
 
-### Architecture Planning Prompt
+**Purpose:** Helps you design a scalable and maintainable software architecture.
 
-**Name**: System Architecture Designer
+**Goal:** Create a clear architectural blueprint that supports your product requirements.
 
-**Purpose**: Helps you design a clean, scalable architecture for your application that follows best practices and accommodates your specific requirements.
+**When to Use:** When planning the technical foundation of your product.
 
-**When to Use**: When planning the overall structure of your application before implementation begins.
+**Prompt Text:**
 
-**Prompt**:
-```
-Help me design a clean, scalable architecture for my application. Guide me through creating a comprehensive architecture plan that follows best practices for my specific tech stack and requirements.
+```markdown
+Help me design a scalable and maintainable software architecture for my [product type] project. I need a clear architectural blueprint that supports our current requirements while allowing for future growth.
 
 First, ask me about:
-- My application type and purpose
-- The selected tech stack
+- The type of application we're building
+- Core functional requirements and user flows
 - Expected scale and performance needs
-- Key technical requirements and constraints
-- Team size and expertise
-- Future expansion plans
+- Security and compliance requirements
+- Integration requirements with other systems
+- Team size and technical expertise
+- Budget and resource constraints
+- Future growth and expansion plans
 
-Then, help me design:
+Then, guide me through designing an architecture with:
 
-1. Overall architectural pattern:
-   - Recommend appropriate patterns (MVC, MVVM, Clean Architecture, etc.)
-   - Explain the benefits for my specific case
-   - Diagram the high-level architecture
+1. Architectural Style and Pattern Selection
+   - Recommended overall architecture (microservices, monolith, serverless, etc.)
+   - Justification for this approach given my context
+   - Tradeoffs and considerations
+   - How this architecture supports our specific requirements
 
-2. Module/component breakdown:
-   - Identify major modules and their responsibilities
-   - Define boundaries and interfaces between modules
-   - Establish naming conventions and organization
+2. System Components and Services
+   - Core components and their responsibilities
+   - Service boundaries and communication patterns
+   - Data flow between components
+   - External dependencies and integrations
+   - API design principles and standards
 
-3. Data flow and state management:
-   - Design data flow through the system
-   - Recommend state management approaches
-   - Define data models and schemas
+3. Data Architecture
+   - Data storage solutions (databases, caching, etc.)
+   - Data models and schemas
+   - Data access patterns
+   - Data migration and evolution strategy
+   - Backup and recovery approach
 
-4. API design (if applicable):
-   - REST/GraphQL endpoint structure
+4. Security Architecture
    - Authentication and authorization approach
-   - Error handling and status codes
-   - Documentation strategy
+   - Data protection strategies
+   - Security monitoring and auditing
+   - Compliance considerations
+   - Threat modeling and mitigation
 
-5. Infrastructure considerations:
-   - Database design and access patterns
+5. Scalability and Performance
+   - Scaling strategy (vertical, horizontal, etc.)
+   - Performance optimization approaches
    - Caching strategy
-   - Scaling approach (vertical vs. horizontal)
-   - Cloud service integration
+   - Load balancing and distribution
+   - Resource estimation and capacity planning
 
-6. Cross-cutting concerns:
-   - Logging and monitoring
-   - Error handling
-   - Security measures
-   - Performance optimization
+6. Resilience and Reliability
+   - Failure modes and recovery strategies
+   - Redundancy and failover mechanisms
+   - Monitoring and alerting approach
+   - SLA and uptime considerations
+   - Disaster recovery planning
 
-For each architectural decision, explain the rationale and trade-offs. Provide diagrams where appropriate to illustrate relationships and flows.
+7. Development and Deployment
+   - Local development environment
+   - CI/CD pipeline integration
+   - Environment strategy (dev, staging, prod)
+   - Feature flagging and progressive rollout
+   - Observability and debugging
 
-The output should be a comprehensive architecture document that can guide implementation while remaining flexible enough to adapt to changing requirements.
+Please provide diagrams or visual representations where appropriate, and explain the rationale behind key architectural decisions. Focus on practical, implementable solutions rather than theoretical ideals.
 ```
-
-**Example Usage**: When planning the overall structure of your application before implementation begins.
-
-**Expected Output**: A detailed architecture plan with diagrams, component breakdowns, data flow descriptions, and implementation guidelines tailored to your specific project.
-</details>
-
-<details>
-<summary><strong>Feature Implementation</strong></summary>
-
-### Feature Implementation Prompt
-
-**Name**: Feature Development Guide
-
-**Purpose**: Helps you plan and implement a specific feature with a structured approach that considers all aspects from design to testing.
-
-**When to Use**: When starting work on a new feature or major enhancement to your application.
-
-**Prompt**:
-```
-Help me plan and implement a specific feature for my application. Guide me through a structured approach that covers all aspects from design to testing.
-
-First, ask me about:
-- The specific feature I want to implement
-- How it fits into the overall application
-- User stories or requirements it addresses
-- Any design or UX considerations
-- Technical constraints or dependencies
-- Timeline and priority
-
-Then, help me create a comprehensive implementation plan:
-
-1. Feature design:
-   - Component breakdown
-   - UI/UX considerations
-   - Data requirements
-   - API endpoints needed
-   - State management approach
-
-2. Implementation steps:
-   - Break down the work into logical tasks
-   - Identify dependencies between tasks
-   - Suggest an implementation order
-   - Highlight potential technical challenges
-
-3. Code structure:
-   - File and folder organization
-   - Key classes/components to create
-   - Interface definitions
-   - Reusable utilities needed
-
-4. Testing strategy:
-   - Unit test coverage plan
-   - Integration test scenarios
-   - Edge cases to consider
-   - Performance testing if applicable
-
-5. Deployment considerations:
-   - Feature flags if needed
-   - Database migrations
-   - Backward compatibility issues
-   - Rollout strategy
-
-For each section, provide specific guidance, code snippets, or examples that are directly applicable to my tech stack and feature requirements.
-
-The output should be a detailed implementation plan that I can follow to efficiently build the feature while maintaining code quality and user experience.
-```
-
-**Example Usage**: When starting work on a new feature or major enhancement to your application.
-
-**Expected Output**: A comprehensive feature implementation plan with specific tasks, code structure recommendations, testing strategies, and deployment considerations.
-</details>
-
-<details>
-<summary><strong>Testing Strategy</strong></summary>
-
-### Testing Strategy Prompt
-
-**Name**: Test Coverage Strategist
-
-**Purpose**: Helps you develop a comprehensive testing strategy for your application that balances coverage, efficiency, and maintainability.
-
-**When to Use**: When establishing testing practices for a new project or improving testing coverage for an existing one.
-
-**Prompt**:
-```
-Help me develop a comprehensive testing strategy for my application. Guide me through creating a balanced approach that ensures quality while remaining practical to implement and maintain.
-
-First, ask me about:
-- My application type and tech stack
-- Current testing practices (if any)
-- Team size and testing expertise
-- CI/CD environment
-- Time constraints and priorities
-- Specific quality concerns
-
-Then, help me create a testing strategy that includes:
-
-1. Testing pyramid implementation:
-   - Unit testing approach and coverage goals
-   - Integration testing scope and approach
-   - End-to-end testing strategy
-   - Manual vs. automated testing balance
-
-2. Test organization:
-   - Folder structure and naming conventions
-   - Test categorization (smoke, regression, etc.)
-   - Shared fixtures and utilities
-
-3. Testing tools selection:
-   - Recommended testing frameworks for my stack
-   - Mocking and stubbing tools
-   - Code coverage tools
-   - UI/visual testing tools if applicable
-
-4. Test-driven development approach:
-   - When and how to apply TDD
-   - Best practices for writing tests first
-   - Balancing TDD with other development approaches
-
-5. CI/CD integration:
-   - Test automation in the pipeline
-   - Test parallelization for speed
-   - Failure handling and reporting
-   - Test environment management
-
-6. Special testing considerations:
-   - Performance testing
-   - Security testing
-   - Accessibility testing
-   - Mobile/responsive testing if applicable
-
-For each component of the strategy, provide specific examples, code snippets, or configuration details relevant to my tech stack.
-
-The output should be a practical testing strategy document that balances thoroughness with implementation reality, and includes specific next steps to implement or improve our testing approach.
-```
-
-**Example Usage**: When establishing testing practices for a new project or improving testing coverage for an existing one.
-
-**Expected Output**: A detailed testing strategy with specific recommendations for testing tools, organization, coverage goals, and CI/CD integration tailored to your project.
-</details>
 
 ---
 
-> **Note**: This prompt library is a living document. Add new prompts or refine existing ones as your project evolves and new needs emerge.
+
+### Feature Implementation Planner
+
+**Purpose:** Helps you plan the detailed implementation of a specific feature.
+
+**Goal:** Break down a feature into manageable tasks with clear technical specifications.
+
+**When to Use:** When you're ready to implement a specific feature from your backlog.
+
+**Prompt Text:**
+
+```markdown
+Help me plan the detailed implementation of [feature name] for my [product type] project. I need to break down this feature into manageable tasks with clear technical specifications.
+
+First, ask me about:
+- The high-level description of the feature
+- User stories or requirements related to this feature
+- Our current architecture and technology stack
+- Any design mockups or wireframes
+- Technical constraints or limitations
+- Dependencies on other features or systems
+- Timeline and resource availability
+
+Then, guide me through creating an implementation plan with:
+
+1. Feature Breakdown
+   - Core components and functionality
+   - User interface elements
+   - Backend services or APIs needed
+   - Data models and storage requirements
+   - Integration points with existing systems
+   - Edge cases and error scenarios
+
+2. Technical Specifications
+   - Detailed requirements for each component
+   - API contracts and data formats
+   - State management approach
+   - Performance requirements
+   - Security considerations
+   - Accessibility requirements
+
+3. Implementation Tasks
+   - Logical breakdown of work into tasks
+   - Dependencies between tasks
+   - Estimated effort for each task
+   - Suggested implementation order
+   - Skills required for each task
+
+4. Testing Strategy
+   - Unit test requirements
+   - Integration test scenarios
+   - End-to-end test cases
+   - Performance testing approach
+   - Manual testing needs
+
+5. Rollout Considerations
+   - Feature flag strategy
+   - Phased rollout approach
+   - Monitoring and metrics
+   - Rollback plan
+   - User feedback collection
+
+6. Documentation Needs
+   - Code documentation requirements
+   - User documentation updates
+   - API documentation
+   - Knowledge transfer considerations
+
+For each section, provide specific, actionable details rather than generic advice. Include code snippets, pseudo-code, or architectural diagrams where appropriate to illustrate the implementation approach.
+```
+
+---
+
+
+### Testing Strategy
+
+**Purpose:** Helps you develop a comprehensive testing approach for your product.
+
+**Goal:** Create a testing strategy that ensures quality and reliability.
+
+**When to Use:** When planning your quality assurance approach for development.
+
+**Prompt Text:**
+
+```markdown
+Help me develop a comprehensive testing strategy for my [product type] project. I need to ensure our product meets quality standards and functions reliably across all scenarios.
+
+First, ask me about:
+- The type of product we're building
+- Our development methodology (Agile, Waterfall, etc.)
+- Our technology stack and architecture
+- Critical user flows and functionality
+- Performance and security requirements
+- Available resources and expertise for testing
+- Timeline and release cadence
+- Any regulatory or compliance requirements
+
+Then, guide me through creating a testing strategy with:
+
+1. Testing Levels
+   - Unit testing approach and coverage goals
+   - Integration testing strategy
+   - System testing requirements
+   - End-to-end testing scenarios
+   - Acceptance testing criteria
+
+2. Testing Types
+   - Functional testing approach
+   - Performance testing (load, stress, endurance)
+   - Security testing methodology
+   - Usability testing plan
+   - Accessibility testing requirements
+   - Compatibility testing (browsers, devices, etc.)
+
+3. Test Automation
+   - What to automate vs. test manually
+   - Recommended automation tools and frameworks
+   - Test automation architecture
+   - Continuous integration strategy
+   - Maintenance approach for test suites
+
+4. Test Environment Management
+   - Environment requirements and setup
+   - Test data management
+   - Configuration management
+   - Environment parity with production
+
+5. Test Execution Process
+   - Test planning and preparation
+   - Test case design methodology
+   - Defect management workflow
+   - Reporting and metrics
+   - Sign-off criteria for releases
+
+6. Specialized Testing Needs
+   - Mobile-specific testing (if applicable)
+   - API testing approach
+   - Database testing strategy
+   - Third-party integration testing
+   - Recovery and failover testing
+
+7. Testing Roles and Responsibilities
+   - Team structure and skill requirements
+   - Developer vs. QA responsibilities
+   - Training and knowledge sharing
+
+Please provide specific recommendations tailored to my product context, including suggested tools, frameworks, and methodologies that would work best for our specific needs.
+```
+
+---
+
+
+## Launch Prompts
+
+### Landing-Page Copy Crafter
+
+**Purpose:** Helps you write compelling landing page copy that converts visitors.
+
+**Goal:** Create persuasive messaging that clearly communicates your value proposition.
+
+**When to Use:** When preparing marketing materials for your product launch.
+
+**Prompt Text:**
+
+```markdown
+Help me craft compelling copy for the landing page of [product name]. I need persuasive messaging that clearly communicates our value proposition and converts visitors into users.
+
+First, ask me about:
+- My product and its core value proposition
+- My target audience and their pain points
+- Key benefits and features of my product
+- Competitive advantages and differentiators
+- Brand voice and tone preferences
+- Call-to-action goals and conversion objectives
+- Any existing messaging or brand guidelines
+
+Then, help me create copy for these essential landing page sections:
+
+1. Headline and Subheadline
+   - Attention-grabbing headline that communicates core value
+   - Supporting subheadline that elaborates on the main benefit
+   - Multiple options with different approaches (benefit-focused, problem-focused, etc.)
+
+2. Hero Section
+   - Opening paragraph that hooks the reader
+   - Clear articulation of the problem we solve
+   - Concise explanation of how we solve it
+   - Primary call-to-action text and placement
+
+3. Features and Benefits
+   - 3-5 key features presented as benefits
+   - Compelling headers for each feature/benefit
+   - Concise descriptions that focus on value, not just functionality
+   - Supporting social proof or metrics for each benefit
+
+4. Social Proof Elements
+   - Customer testimonial templates
+   - Case study summary formats
+   - Statistical proof points and how to present them
+   - Trust indicators and credibility builders
+
+5. Objection Handling
+   - Addressing common concerns or objections
+   - FAQ section content
+   - Risk reversal statements (guarantees, free trials, etc.)
+
+6. Call-to-Action Sections
+   - Primary and secondary CTA button text
+   - Supporting copy around CTAs
+   - Urgency or scarcity elements (if appropriate)
+   - Next steps explanation
+
+For each section, provide multiple options with different approaches, and explain the psychology behind effective copy choices. Focus on clarity, specificity, and customer-centric language rather than jargon or marketing speak.
+```
+
+---
+
+
+### Pricing Page Optimiser
+
+**Purpose:** Helps you design an effective pricing strategy and page layout.
+
+**Goal:** Create a pricing structure and presentation that maximizes conversions and revenue.
+
+**When to Use:** When finalizing your monetization strategy before launch.
+
+**Prompt Text:**
+
+```markdown
+Help me design an effective pricing strategy and page layout for [product name]. I need to create a pricing structure and presentation that maximizes conversions while communicating our value.
+
+First, ask me about:
+- My product and its core value proposition
+- My target customer segments and their willingness to pay
+- My cost structure and margin requirements
+- Competitive pricing in the market
+- My business model (subscription, one-time, etc.)
+- Value metrics that could drive pricing
+- Any existing pricing research or testing
+
+Then, guide me through creating:
+
+1. Pricing Strategy
+   - Recommended pricing models (tiered, usage-based, hybrid, etc.)
+   - Price points for different tiers or packages
+   - Feature differentiation between tiers
+   - Psychological pricing tactics (anchoring, decoy pricing, etc.)
+   - Potential for add-ons or expansion revenue
+   - Annual vs. monthly pricing options
+
+2. Pricing Page Structure
+   - Overall layout and flow
+   - Tier names and positioning
+   - Feature comparison presentation
+   - Highlighting the recommended or most popular plan
+   - Visual hierarchy and attention flow
+   - Mobile vs. desktop considerations
+
+3. Value Communication
+   - How to articulate value rather than just features
+   - ROI or value-based messaging
+   - Addressing price sensitivity and objections
+   - Social proof and trust elements specific to pricing
+   - Risk-reduction elements (guarantees, free trials, etc.)
+
+4. Call-to-Action Optimization
+   - CTA button text and design
+   - Friction reduction in the purchase process
+   - Upsell and cross-sell opportunities
+   - Trial-to-paid conversion strategy
+
+5. Testing Strategy
+   - Key elements to test
+   - Metrics to track
+   - A/B testing approach for pricing page elements
+   - How to gather customer feedback on pricing
+
+For each section, provide specific recommendations tailored to my product and market context, with examples and rationale. Help me balance maximizing revenue with customer acquisition and satisfaction.
+```
+
+---
+
+
+### Objection-Handling FAQ Builder
+
+**Purpose:** Helps you create a comprehensive FAQ that addresses common objections and questions.
+
+**Goal:** Anticipate and address customer concerns to improve conversion rates.
+
+**When to Use:** When preparing customer-facing documentation before launch.
+
+**Prompt Text:**
+
+```markdown
+Help me create a comprehensive FAQ section that addresses common objections and questions about [product name]. I need to anticipate customer concerns and provide reassuring answers that improve conversion rates.
+
+First, ask me about:
+- My product and its core functionality
+- My target audience and their typical concerns
+- Common objections or hesitations in the sales process
+- Competitive alternatives and how we compare
+- Pricing model and potential price sensitivity
+- Technical requirements or limitations
+- Support and service level expectations
+
+Then, help me create:
+
+1. Objection-Handling Questions
+   - Questions that address common sales objections
+   - Concerns about value, price, or ROI
+   - Comparisons with alternatives or competitors
+   - Risk-related concerns (data security, reliability, etc.)
+   - Implementation or onboarding concerns
+   - Questions about long-term support and updates
+
+2. Product Clarification Questions
+   - Questions about core features and capabilities
+   - Technical requirements and compatibility
+   - Integration with other tools or systems
+   - Customization and flexibility options
+   - Performance and scalability questions
+
+3. Practical Questions
+   - Onboarding and implementation process
+   - Training and support availability
+   - Account management and billing
+   - Cancellation and refund policies
+   - Data ownership and privacy
+
+4. Strategic Organization
+   - Logical grouping of questions by theme
+   - Prioritization of most important questions
+   - Progressive disclosure approach (basic to advanced)
+   - Search and navigation recommendations
+
+5. Answer Crafting
+   - Clear, concise answers that directly address concerns
+   - Positive framing that reinforces value
+   - Specific examples or social proof where relevant
+   - Appropriate tone and voice for my brand
+   - Call-to-action suggestions where appropriate
+
+For each question, provide a well-crafted answer that not only addresses the specific concern but also reinforces our value proposition and encourages the next step in the customer journey.
+```
+
+---
+
+
+### Launch Checklist & Roll-back Plan
+
+**Purpose:** Helps you create a comprehensive launch plan with contingency measures.
+
+**Goal:** Ensure a smooth product launch with risk mitigation strategies in place.
+
+**When to Use:** When preparing for product launch or major feature release.
+
+**Prompt Text:**
+
+```markdown
+Help me create a comprehensive launch checklist and roll-back plan for [product/feature name]. I need to ensure a smooth launch while being prepared for potential issues.
+
+First, ask me about:
+- The product or feature being launched
+- Launch scope and target audience
+- Technical architecture and dependencies
+- Current testing status and known issues
+- Team structure and responsibilities
+- Timeline and launch window constraints
+- Critical business requirements for the launch
+
+Then, help me create:
+
+1. Pre-Launch Checklist
+   - Technical readiness verification
+   - Performance testing and benchmarks
+   - Security and compliance checks
+   - Content and copy review
+   - Analytics and monitoring setup
+   - User documentation and support materials
+   - Team training and readiness
+   - Stakeholder sign-offs and approvals
+
+2. Launch Day Plan
+   - Detailed launch sequence and timing
+   - Team roles and responsibilities during launch
+   - Communication channels and protocols
+   - Monitoring strategy and key metrics to watch
+   - Initial user feedback collection
+   - Support team preparation and escalation paths
+   - Go/No-Go decision criteria
+
+3. Post-Launch Monitoring
+   - Critical metrics and KPIs to track
+   - Warning signs or thresholds that indicate problems
+   - User feedback collection and analysis
+   - Performance monitoring approach
+   - Error tracking and bug triage process
+   - Regular check-in schedule and reporting
+
+4. Roll-Back Plan
+   - Specific scenarios that would trigger a rollback
+   - Detailed rollback procedures for each scenario
+   - Data integrity and consistency considerations
+   - Communication templates for rollback scenarios
+   - Team responsibilities during rollback
+   - Testing the rollback process pre-launch
+
+5. Phased Rollout Strategy (if applicable)
+   - User segment definitions for phased release
+   - Criteria for expanding to additional segments
+   - Monitoring between phases
+   - Timeline and triggers for full release
+
+6. Launch Communication Plan
+   - Internal stakeholder communications
+   - Customer/user communications
+   - Support team briefing and documentation
+   - Public relations and marketing coordination
+
+For each section, provide specific, actionable items tailored to my product context, with clear ownership assignments and verification methods.
+```
+
+---
+
+
+## Grow Prompts
+
+### Growth Experiment Generator
+
+**Purpose:** Helps you design data-driven growth experiments to improve key metrics.
+
+**Goal:** Create structured experiments to test growth hypotheses and improve conversion.
+
+**When to Use:** When looking to optimize acquisition, activation, retention, or revenue.
+
+**Prompt Text:**
+
+```markdown
+Help me design data-driven growth experiments for [product name] to improve our [specific metric or goal]. I need structured experiments to test growth hypotheses and improve our key performance indicators.
+
+First, ask me about:
+- The specific metric or goal we're trying to improve
+- Current performance baseline and targets
+- Our product's user journey and conversion funnel
+- Available user data and analytics capabilities
+- Resources available for running experiments
+- Previous experiments we've run and their results
+- Timeline and constraints for implementation
+
+Then, help me create:
+
+1. Experiment Ideation
+   - 5-10 potential experiment ideas targeting our goal
+   - Categorized by funnel stage (acquisition, activation, retention, revenue)
+   - Mix of small, medium, and large effort experiments
+   - Both optimization and innovation experiments
+   - Inspiration from relevant case studies or industry examples
+
+2. Experiment Prioritization
+   - Framework for evaluating experiment potential (ICE, PIE, etc.)
+   - Assessment of each idea based on impact, confidence, and effort
+   - Recommended sequence of experiments
+   - Quick wins vs. strategic long-term tests
+
+3. For each prioritized experiment:
+   - Clear hypothesis statement (We believe that [change] will result in [outcome])
+   - Success metrics and expected impact
+   - Detailed implementation plan
+   - Required resources and timeline
+   - Potential risks and mitigations
+   - Minimum viable test definition
+
+4. Experiment Tracking Template
+   - Key information to document before, during, and after the test
+   - Statistical significance considerations
+   - Qualitative data collection approach
+   - Learning documentation format
+
+5. Testing Process
+   - How to set up proper control groups
+   - A/B testing methodology recommendations
+   - Sample size and duration calculations
+   - How to analyze results and make decisions
+   - Framework for scaling successful experiments
+
+Please be specific and practical in your recommendations, focusing on experiments that are feasible given my context and have a clear connection to the metric we're trying to improve.
+```
+
+---
+
+
+### Retrospective Facilitator
+
+**Purpose:** Helps you conduct effective retrospectives to improve team processes.
+
+**Goal:** Identify actionable insights and improvements from past work.
+
+**When to Use:** After completing a sprint, milestone, or project phase.
+
+**Prompt Text:**
+
+```markdown
+Help me plan and facilitate an effective retrospective for my team following our recent [sprint/milestone/project phase]. I need to identify actionable insights and improvements from our work.
+
+First, ask me about:
+- The scope and timeframe we're reflecting on
+- Team size and composition
+- Current team dynamics and communication patterns
+- Any significant challenges or successes during this period
+- Previous retrospective formats we've used
+- Specific areas we might want to focus on
+- How we typically track and implement retrospective actions
+
+Then, help me create:
+
+1. Retrospective Structure
+   - Recommended format and timeboxing
+   - Warm-up activities to set the right tone
+   - Core retrospective exercises tailored to our context
+   - Closing activities and next steps
+   - Remote vs. in-person considerations
+
+2. Facilitation Guide
+   - Opening script and ground rules
+   - Key questions to prompt meaningful discussion
+   - Techniques for ensuring balanced participation
+   - How to handle difficult conversations constructively
+   - Methods for prioritizing insights and actions
+   - Time management tips
+
+3. For each recommended exercise:
+   - Clear instructions and purpose
+   - Materials or tools needed
+   - Timeboxing recommendations
+   - Expected outcomes
+   - Variations or alternatives
+
+4. Action Planning Framework
+   - How to transform insights into specific actions
+   - Criteria for good action items (specific, measurable, assigned, etc.)
+   - Prioritization method for identified improvements
+   - Accountability and follow-up mechanisms
+   - Integration with existing workflows
+
+5. Continuous Improvement Approach
+   - How to track retrospective actions between meetings
+   - Methods for measuring the impact of implemented changes
+   - Evolving retrospective formats to prevent staleness
+   - Building a culture of continuous improvement
+
+Please provide specific, practical guidance tailored to my team's context, avoiding generic advice. Include templates, scripts, and examples I can use directly in our retrospective.
+```
+
+---
+
+
+### KPI Dashboard Prompt
+
+**Purpose:** Helps you design an effective KPI dashboard to track product performance.
+
+**Goal:** Create a focused dashboard that provides actionable insights on key metrics.
+
+**When to Use:** When setting up analytics or refining your measurement approach.
+
+**Prompt Text:**
+
+```markdown
+Help me design an effective KPI dashboard for [product name] that will provide actionable insights on our performance. I need to track the right metrics in a way that drives decisions and improvements.
+
+First, ask me about:
+- The type of product and business model
+- Our key business objectives and success criteria
+- Current user lifecycle and conversion funnel
+- Available data sources and analytics tools
+- Primary stakeholders and their information needs
+- Current reporting processes and pain points
+- Decision-making processes that the dashboard should support
+
+Then, guide me through creating:
+
+1. KPI Framework
+   - Core KPIs aligned with business objectives
+   - Leading vs. lagging indicators
+   - North Star metric identification
+   - Supporting metrics hierarchy
+   - Balanced scorecard approach (user, business, product health)
+
+2. Dashboard Structure
+   - Logical organization and layout
+   - Recommended visualization types for different metrics
+   - Information hierarchy and visual emphasis
+   - Drill-down capabilities and detail levels
+   - Time period comparisons and trend visibility
+
+3. For each key dashboard section:
+   - Specific metrics to include
+   - Visualization recommendations
+   - Contextual information needed
+   - Benchmarks and targets
+   - Alert thresholds and indicators
+
+4. Implementation Recommendations
+   - Data collection requirements
+   - Dashboard tool suggestions
+   - Refresh frequency and data latency
+   - Access and sharing approach
+   - Mobile vs. desktop considerations
+
+5. Dashboard Usage Framework
+   - Regular review cadence and process
+   - Guided analysis questions for users
+   - Action-triggering thresholds
+   - Connection to decision-making processes
+   - Continuous improvement of the dashboard itself
+
+Please be specific and practical in your recommendations, focusing on metrics that truly matter rather than vanity metrics. Provide mockup suggestions and examples tailored to my product context.
+```
+
+---
+
