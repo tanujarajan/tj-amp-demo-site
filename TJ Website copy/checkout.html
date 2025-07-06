@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!-- Amplitude Tracking Code -->
+    <script src="config.js"></script>
+    <script>
+        // Dynamically load the Amplitude SDK using the API key
+        const amplitudeScript = document.createElement("script");
+        amplitudeScript.src = `https://cdn.amplitude.com/script/${AMPLITUDE_API_KEY}.js`;
+        document.head.appendChild(amplitudeScript);
+
+        // Initialize Amplitude after the script loads
+        amplitudeScript.onload = function () {
+            console.log("🚀 Amplitude Analytics SDK loaded successfully");
+            window.amplitude.init(AMPLITUDE_API_KEY, {
+                fetchRemoteConfig: true,
+                autocapture: false
+            });
+        };
+
+        amplitudeScript.onerror = function () {
+            console.error("❌ Failed to load Amplitude Analytics SDK");
+        };
+    </script>
+    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.13.5-min.js.gz"></script>
+    <script>
+        const sessionReplayTracking = window.sessionReplay.plugin({ sampleRate: 1 });
+        window.amplitude.add(sessionReplayTracking);
+    </script>
+    <link rel="stylesheet" href="website_styles.css">
+</head>
+
+<body data-page="checkout">
+    <header>
+        <h1>Checkout</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="checkout-content">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <p>Loading cart...</p>
+        </div>
+
+        <div id="checkout-actions" style="margin-top: 20px;">
+            <button id="pay-now-btn" onclick="processPayment()" class="btn btn-primary" style="display: none;">
+                Pay Now
+            </button>
+            <button onclick="goBack()" class="btn btn-secondary">
+                Back to Shopping
+            </button>
+        </div>
+
+        <div id="thank-you-message" style="display: none; margin-top: 20px;">
+            <h3>🎉 Thank You for Your Order!</h3>
+            <p>Your order has been successfully processed.</p>
+            <button onclick="startNewOrder()" class="btn btn-primary">
+                Continue Shopping
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Shop Inc.</p>
+    </footer>
+
+    <script src="ori_script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadCartItems();
+        });
+
+        function loadCartItems() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsDiv = document.getElementById('cart-items');
+            const payNowBtn = document.getElementById('pay-now-btn');
+
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+                payNowBtn.style.display = 'none';
+            } else {
+                let cartHTML = '<ul>';
+                cart.forEach(item => {
+                    cartHTML += `<li>${item.name} - ${item.price}</li>`;
+                });
+                cartHTML += '</ul>';
+                cartHTML += `<p><strong>Items in cart: ${cart.length}</strong></p>`;
+
+                cartItemsDiv.innerHTML = cartHTML;
+                payNowBtn.style.display = 'inline-block';
+            }
+        }
+
+        function processPayment() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Track the Pay Now event
+            amplitude.track("clickedPayNow", {
+                cart_item_count: cart.length,
+                cart_items: cart.map(item => item.name).join(', '),
+                checkout_method: 'simple_checkout'
+            });
+
+            console.log("💳 Processing payment...");
+
+            // Clear cart after "payment"
+            localStorage.removeItem('cart');
+
+            // Show thank you message
+            document.getElementById('checkout-actions').style.display = 'none';
+            document.getElementById('cart-items').style.display = 'none';
+            document.getElementById('thank-you-message').style.display = 'block';
+        }
+
+        function goBack() {
+            // Track checkout exit
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            amplitude.track("clickedCheckout", {
+                cart_item_count: cart.length,
+                cart_items: cart.map(item => item.name).join(', ')
+            });
+
+            window.history.back();
+        }
+
+        function startNewOrder() {
+            // Navigate back to products
+            amplitude.track("viewedProducts");
+            window.location.href = 'products.html';
+        }
+    </script>
+</body>
+
+</html>

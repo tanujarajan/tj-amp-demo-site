@@ -92,3 +92,83 @@ footer {
 .back-button:hover {
     background-color: #555;
 }
+
+/* Button styling for Add to Cart, Checkout, Pay Now */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+}
+
+/* Product actions container */
+.product-actions {
+    margin-top: 20px;
+}
+
+/* Shake animation for treatment variant */
+.shake-animation {
+    animation: shake 0.3s ease-in-out infinite;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    75% {
+        transform: translateX(3px);
+    }
+}
+
+/* Checkout page specific styling */
+body[data-page="checkout"] {
+    background-color: #f8f9fa;
+}
+
+#cart-items ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#cart-items li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+#thank-you-message {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 20px;
+    border-radius: 5px;
+}

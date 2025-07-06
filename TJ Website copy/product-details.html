@@ -8,6 +8,12 @@
     <!-- Amplitude Tracking Code -->
     <script src="config.js"></script>
     <script>
+        // Deployment key for Amplitude Experiment
+        const EXPERIMENT_DEPLOYMENT_KEY = "client-3ylRfNZQxfnLPQzcggf8gRB1xDYeTkWs";
+
+        // Global experiment client variable
+        let experimentClient = null;
+
         // Dynamically load the Amplitude SDK using the API key
         const amplitudeScript = document.createElement("script");
         amplitudeScript.src = `https://cdn.amplitude.com/script/${AMPLITUDE_API_KEY}.js`;
@@ -15,16 +21,45 @@
 
         // Initialize Amplitude after the script loads
         amplitudeScript.onload = function () {
+            console.log("🚀 Amplitude Analytics SDK loaded successfully");
             window.amplitude.init(AMPLITUDE_API_KEY, {
                 fetchRemoteConfig: true,
                 autocapture: false
             });
+
+            // Load Experiment SDK after Analytics is ready
+            loadExperimentSDK();
         };
 
-        // Load Amplitude Experiment SDK
-        const experimentScript = document.createElement("script");
-        experimentScript.src = `https://cdn.amplitude.com/script/${AMPLITUDE_API_KEY}.experiment.js`;
-        document.head.appendChild(experimentScript);
+        amplitudeScript.onerror = function () {
+            console.error("❌ Failed to load Amplitude Analytics SDK");
+        };
+
+        function loadExperimentSDK() {
+            // Load Amplitude Experiment SDK using official CDN URL from docs
+            const experimentScript = document.createElement("script");
+            experimentScript.src = "https://unpkg.com/@amplitude/experiment-js-client@1.15.5/dist/experiment.umd.js";
+            document.head.appendChild(experimentScript);
+
+            experimentScript.onload = function () {
+                console.log("🧪 Amplitude Experiment SDK loaded successfully");
+                initializeExperiment();
+            };
+
+            experimentScript.onerror = function () {
+                console.error("❌ Failed to load Amplitude Experiment SDK");
+            };
+        }
+
+        function initializeExperiment() {
+            try {
+                // Initialize Experiment with existing Amplitude Analytics (from official docs)
+                window.experimentClient = window.Experiment.initializeWithAmplitudeAnalytics(EXPERIMENT_DEPLOYMENT_KEY);
+                console.log("✅ Amplitude Experiment initialized successfully");
+            } catch (error) {
+                console.error("❌ Failed to initialize Amplitude Experiment:", error);
+            }
+        }
     </script>
     <!-- <script src="https://cdn.amplitude.com/script/20c2a0fc1623d7a7136c5373b6587777.js"></script>
     <script>
